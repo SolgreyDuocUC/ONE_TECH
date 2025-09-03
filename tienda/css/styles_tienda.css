@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-header {
+    color: #d3d3d3;
+    font-family: 'Roboto', sans-serif; /* Fuente principal */
+    background-color: #121212; /* Fondo oscuro */
+    padding: 20px;
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Orbitron', sans-serif; /* Fuente para encabezados */
+
+}
+
+
+
+/*
+Fuente Principal:
+o Roboto, una fuente sans-serif moderna y legible para todo el texto general.
+o https://fonts.google.com/specimen/Roboto
+❖ Fuente de Encabezado:
+o Orbitron, una fuente futurista que resalta los títulos y encabezados.
+o https://fonts.google.com/specimen/Orbitron
+*/
+
+/*
+Texto Principal:
+o Blanco (#FFFFFF) para asegurar un buen contraste sobre el fondo oscuro.
+❖ Texto Secundario:
+o Gris Claro (#D3D3D3) para descripciones y texto secundario.
+*/
