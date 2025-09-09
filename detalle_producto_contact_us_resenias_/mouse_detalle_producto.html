@@ -9,41 +9,58 @@
 <body>
     <form id="mouse-details" class="border p-4 rounder shadow-sm">
     <div id="mouse-details">
-        <header class="main-mouse-detall">
-            <div class="header-flex_8">
-                <h1>Onetech</h1>
-                <nav>
-                    <a href="home">Home</a>
-                    <a>|</a>
-                    <a href="productos">Productos</a>
-                    <a>|</a>
-                    <a href="nosotros">Nosotros</a>
-                    <a>|</a>
-                    <a href="blogs">Blogs</a>
-                    <a>|</a>
-                    <a href="contact_us.html">Contacto</a>
-                    <a href="cart.html">Cart(4)</a>
-                </nav>
-            </div>
-        </header>
-        <div class="breadcrumb_8">
-            <header>
-                <nav>
-                    <a href="home">Home</a>
-                    <a>></a>
-                    <a href="category">Mouse</a>
-                    <a>></a>
-                    <a>Mouse Gamer Logitech G502 HERO </a>
-                </nav>
-            </header>
+        <body class="bg-black text-white">
+
+            <!-- Barra de navegación principal -->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-black shadow-sm py-3">
+              <div class="container">
+            
+                <!-- Logo -->
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                  <img src="tienda/One_tech.png" alt="Logo One Tech" width="55" height="55" class="mr-2 rounded">
+                  <span class="h4 font-weight-bold mb-0 text-success">ONE TECH</span>
+                </a>
+            
+                <!-- Botón hamburguesa para móviles -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent"
+                  aria-controls="navbarContent" aria-expanded="false" aria-label="Mostrar menú">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+            
+                <!-- Menú de navegación -->
+                <div class="collapse navbar-collapse" id="navbarContent">
+            
+                  <!-- Enlaces principales -->
+                  <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Productos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="detalle_producto_contact_us_resenias_/contact_us.html">Contacto</a></li>
+                  </ul>
+            
+                  <!-- Botón Carrito con contador -->
+                  <a href="#" class="btn btn-success btn-sm rounded-pill mr-3 position-relative">
+                    🛒 Carrito
+                    <span id="cart-count" class="badge badge-light text-dark position-absolute" style="top: -8px; right: -10px; font-size: 12px;">0</span>
+                  </a>
+            
+                  <!-- Enlaces de sesión -->
+                  <div class="d-none d-lg-block">
+                    <a href="login.html" class="text-success mx-2">Iniciar sesión</a>
+                    <a href="register.html" class="text-success mx-2">Registrarse</a>
+                  </div>
+                </div>
+              </div>
+            </nav>
         </div>
         <div class="detalle-producto">
             <div class="product-images">
-                <img id="main-image" src="img1.jpg" alt="Imagen_grande_izquierda">
+                <img id="main-image" src="productos/MS001 Mouse Mouse Gamer Logitech G502 HERO.webp" alt="Imagen_grande_izquierda">
                 <div class="thumbnails">
-                    <img src="img1.jpg" alt="Miniatura 1" onclick="showImage('img1.jpg')">
-                    <img src="img2.jpg" alt="Miniatura 2" onclick="showImage('img2.jpg')">
-                    <img src="img3.jpg" alt="Miniatura 3" onclick="showImage('img3.jpg')">
+                    <img src="productos/MS001 Mouse Mouse Gamer Logitech G502 HERO.webp" alt="Miniatura 1" onclick="showImage('productos/MS001 Mouse Mouse Gamer Logitech G502 HERO.webp')">
+                    <img src="tienda/g502_2-.png" alt="Miniatura 2" onclick="showImage('tienda/g502_2-.png')">
+                    <img src="tienda/mouse_502_img_3.png" alt="Miniatura 3" onclick="showImage('tienda/mouse_502_img_3.png')">
                 </div>
             </div>
             <div class="product-info">
@@ -129,5 +146,31 @@
         document.getElementById('main-image').src = src;
     }
     </script>
+
+    <!-- Derechos de autor -->
+  <div class="row border-top pt-4 mt-4" style="border-color: rgba(255,255,255,0.1) !important;">
+    <div class="col-md-6 text-center text-md-left mb-2 mb-md-0">
+      <p class="m-0 text-white-50">&copy; 2025 ONE TECH. Todos los derechos reservados.</p>
+    </div>
+    <div class="col-md-6 text-center text-md-right">
+      <p class="m-0 text-white-50">Desarrollado por <strong>Centro de Innovación DUOC UC</strong></p>
+    </div>
+  </div>
+</footer>
+
+
+  <!-- Botón volver arriba -->
+  <a href="#" class="btn btn-lg btn-accent btn-lg-square back-to-top">
+    <i class="fa fa-angle-double-up"></i>
+  </a>
+
+  <!-- jQuery (requerido por Bootstrap) -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+  <!-- Bootstrap Bundle (con Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Archivo JS principal -->
+  <script src="js/main.js"></script>
 
 </html>
