@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silas Gamers - Detalle Producto</title>
+    <link rel="stylesheet" href="styles.css/styles_silla_gamers_detalle_producto.css">
+</head>
+<body>
+    <form id="sillasgamers-details" class="border p-4 rounder shadow-sm">
+    <div id="sillasgamers-details">
+        <header class="main-sillasgamers-detall">
+            <div class="header-flex_7">
+                <h1>Onetech</h1>
+                <nav>
+                    <a href="home">Home</a>
+                    <a>|</a>
+                    <a href="productos">Productos</a>
+                    <a>|</a>
+                    <a href="nosotros">Nosotros</a>
+                    <a>|</a>
+                    <a href="blogs">Blogs</a>
+                    <a>|</a>
+                    <a href="contact_us.html">Contacto</a>
+                    <a href="cart.html">Cart(4)</a>
+                </nav>
+            </div>
+        </header>
+        <div class="breadcrumb_7">
+            <header>
+                <nav>
+                    <a href="home">Home</a>
+                    <a>></a>
+                    <a href="category">Sillas Gamers</a>
+                    <a>></a>
+                    <a>Silla Gamer Secretlab Titan</a>
+                </nav>
+            </header>
+        </div>
+        <div class="detalle-producto">
+            <div class="product-images">
+                <img id="main-image" src="img1.jpg" alt="Imagen_grande_izquierda">
+                <div class="thumbnails">
+                    <img src="img1.jpg" alt="Miniatura 1" onclick="showImage('img1.jpg')">
+                    <img src="img2.jpg" alt="Miniatura 2" onclick="showImage('img2.jpg')">
+                    <img src="img3.jpg" alt="Miniatura 3" onclick="showImage('img3.jpg')">
+                </div>
+            </div>
+            <div class="product-info">
+                <h3>Silla Gamer Secretlab Titan $349.990 CLP</h3>
+                <p>Diseñada para el máximo confort, esta silla ofrece un soporte
+                ergonómico y personalización ajustable para sesiones de juego prolongadas.
+                </p>
+                <form action="seleccionar_producto">
+                    <label for="cantidad_product">Cantidad:</label>
+                    <select name="cantidad_productos">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                    </select>
+                    <button type="submit" class="btn btn-primary">Añadir al carrito</button>
+                </form>
+                <!-- Reseñas -->
+                <details class="reviews">
+                <summary class="reviews-tab">
+                    <span class="stars" aria-label="Valoración 4.5 de 5">
+                    <span class="star full"></span>
+                    <span class="star full"></span>
+                    <span class="star full"></span>
+                    <span class="star full"></span>
+                    <span class="star half"></span>
+                    </span>
+                    <span class="rating-number">4.5</span>
+                    <span class="reviews-count">(24 reseñas)</span>
+                </summary>
+
+                <!-- Contenido opcional al desplegar (puedes borrar o editar) -->
+                <div class="reviews-body">
+                    <div class="review-item">
+                    <strong>María</strong> — “Excelente calidad, se siente sólido.”
+                    </div>
+                    <div class="review-item">
+                    <strong>Juan</strong> — “Llegó rápido, funciona perfecto con mi setup.”
+                    </div>
+                    <div>
+                        <nav>
+                            <a href="reseña.html">¿Quieres dejar tu reseña? Aprieta aquí</a>
+                        </nav>
+                    </div>
+                </div>
+                </details>
+            </div>
+        </div>
+            <p class="related-products-text">Related Products</p>
+        <div class="related-products">
+            <div class="related-item">
+                <img src="img_generico1.jpg" alt="Generico1">
+                <div class="related-desc">Catan</div>
+            </div>
+            <div class="related-item">
+                <img src="img_generico2.jpg" alt="Generico2">
+                <div class="related-desc">Consola Retro</div>
+            </div>
+            <div class="related-item">
+                <img src="img_generico3.jpg" alt="Generico3">
+                <div class="related-desc">Silla Gamer</div>
+            </div>
+            <div class="related-item">
+                <img src="img_generico4.jpg" alt="Generico4">
+                <div class="related-desc">Mousepad XL</div>
+            </div>
+            <div class="related-item">
+                <img src="img_generico5.jpg" alt="Generico5">
+                <div class="related-desc">Mouse RGB</div>
+            </div>
+        </div>
+    </div>  
+    </body>
+    <script>
+    function showImage(src) {
+        document.getElementById('main-image').src = src;
+    }
+    </script>
+
+</html>

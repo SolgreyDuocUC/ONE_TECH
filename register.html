@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OneTech - Registro de Usuario</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="css/register.css" />
+</head>
+
+<body class="bg-dark text-white">
+
+  <!-- Sección principal del registro -->
+  <section class="h-100 gradient-gamer">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-10 col-lg-8">
+
+          <!-- Tarjeta del formulario -->
+          <div class="card text-white" style="border-radius: 15px; background-color: #1c1c1c;">
+            <div class="card-body p-5">
+              
+              <!-- Título -->
+              <h3 class="fw-normal mb-5 text-center" style="color: #00ff99;">
+                <strong>REGISTRO DE USUARIO</strong>
+              </h3>
+
+              <!-- Formulario -->
+              <form id="formRegistro">
+
+                <!-- Nombre completo -->
+                <div class="form-group mb-4">
+                  <label for="nombre">Nombre completo</label>
+                  <input type="text" id="nombre" name="nombre" class="form-control form-control-lg" required />
+                </div>
+
+                <!-- RUT -->
+                <div class="form-group mb-4">
+                  <label for="rut">RUT</label>
+                  <input type="text" id="rut" name="rut" class="form-control form-control-lg" placeholder="Ej: 12.345.678-9" required />
+                </div>
+
+                <!-- Correo electrónico -->
+                <div class="form-group mb-4">
+                  <label for="correo">Correo electrónico</label>
+                  <input type="email" id="correo" name="correo" class="form-control form-control-lg" required />
+                </div>
+
+                <!-- Teléfono -->
+                <div class="form-group mb-4">
+                  <label for="telefono">Teléfono</label>
+                  <input type="tel" id="telefono" name="telefono" class="form-control form-control-lg" placeholder="+56 9 1234 5678" required />
+                </div>
+
+                <!-- Dirección -->
+                <div class="form-group mb-4">
+                  <label for="direccion">Dirección</label>
+                  <input type="text" id="direccion" name="direccion" class="form-control form-control-lg" placeholder="Calle, número, depto." required />
+                </div>
+
+                <!-- Región:
+                    Región de Arica y Parinacota: (Capital: Arica)
+                    Región de Tarapacá: (Capital: Iquique)
+
+                    Región de Atacama: (Capital: Copiapó)
+                    Región de Coquimbo: (Capital: La Serena)
+
+                    Región del Libertador General Bernardo O'Higgins: (Capital: Rancagua)
+                    Región del Maule: (Capital: Talca)
+                    Región de Ñuble: (Capital: Chillán)
+
+
+                    Región de Los Ríos: (Capital: Valdivia)
+                    Región de Los Lagos: (Capital: Puerto Montt)
+                    Región de Aysén del General Ibáñez del Campo: (Capital: Coyhaique)
+
+                -->
+                <div class="form-group mb-4">
+                  <label for="region">Región</label>
+                  <select id="region" name="region" class="form-control form-control-lg" required>
+                    <option value="">Seleccione región</option>
+                    <option>Región Metropolitana</option>
+                    <option>Región de Valparaíso</option>
+                    <option>Región del Biobío</option>
+                    <option>Región de La Araucanía</option>
+                    <option>Región de Antofagasta</option>
+                    <option>Región de Magallanes y la Antártica Chilena</option>
+
+                  </select>
+                </div>
+
+                <!-- Comuna -->
+                <div class="form-group mb-4">
+                  <label for="comuna">Comuna</label>
+                  <input type="text" id="comuna" name="comuna" class="form-control form-control-lg" required />
+                </div>
+
+                <!-- Contraseña -->
+                <div class="form-group mb-4">
+                  <label for="password">Contraseña</label>
+                  <input type="password" id="password" name="password" class="form-control form-control-lg" required />
+                </div>
+
+                <!-- Confirmar Contraseña -->
+                <div class="form-group mb-4">
+                  <label for="password2">Confirmar contraseña</label>
+                  <input type="password" id="password2" name="password2" class="form-control form-control-lg" required />
+                </div>
+
+                <!-- Términos -->
+                <div class="form-check mb-4">
+                  <input class="form-check-input" type="checkbox" id="terminos" required />
+                  <label class="form-check-label" for="terminos">
+                    Acepto los <a href="#" class="text-success"><u>Términos y Condiciones</u></a>
+                  </label>
+                </div>
+
+                <!-- Botón de registro -->
+                <button type="submit" class="btn btn-lg w-100 gamer-btn">
+                  Crear cuenta
+                </button>
+
+                <!-- Separador -->
+                <hr class="my-4" style="border-color:#444;" />
+
+                <!-- Enlace a login -->
+                <p class="text-center">
+                  ¿Ya tienes cuenta? 
+                  <a href="login.html" class="text-success"><u>Inicia sesión aquí</u></a>
+                </p>
+
+                <!-- Volver al Inicio -->
+                <p class="text-center">
+                  Voler al inicio  
+                  <a href="main.html" class="text-success"><u>Voler al inicio</u></a>
+                </p>
+
+              </form>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- jQuery (requerido por Bootstrap) -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+  <!-- Bootstrap Bundle (con Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Archivo JS principal -->
+  <script src="js/gestionUsuarios.js"></script>
+
+</body>
+</html>
