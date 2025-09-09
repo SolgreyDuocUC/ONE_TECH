@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OneTech - Inicio de Sesión</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="css/login.css" />
+</head>
+
+<body class="bg-dark text-white">
+
+  <!-- Sección principal de inicio de sesión -->
+  <section class="h-100 gradient-gamer">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-8 col-lg-6">
+          
+          <!-- Tarjeta del formulario -->
+          <div class="card text-white" style="border-radius: 15px; background-color: #1c1c1c;">
+            <div class="card-body p-5">
+              
+              <!-- Título -->
+              <h3 class="fw-normal mb-5 text-center" style="color: #00ff99;">
+                <strong>INICIO DE SESIÓN</strong>
+              </h3>
+
+              <!-- Formulario -->
+              <form id="formLogin">
+
+                <!-- Correo electrónico -->
+                <div class="form-group mb-4">
+                  <label for="correo">Correo electrónico</label>
+                  <input type="email" id="correo" name="correo" class="form-control form-control-lg" required />
+                </div>
+
+                <!-- Contraseña -->
+                <div class="form-group mb-4">
+                  <label for="password">Contraseña</label>
+                  <input type="password" id="password" name="password" class="form-control form-control-lg" required />
+                </div>
+
+                <!-- Recordarme -->
+                <div class="form-check mb-4">
+                  <input class="form-check-input" type="checkbox" value="" id="recordarme" />
+                  <label class="form-check-label" for="recordarme">
+                    Recordarme en este dispositivo
+                  </label>
+                </div>
+
+                <!-- Botón Ingresar -->
+                <button type="submit" class="btn btn-lg w-100 gamer-btn">
+                  Ingresar
+                </button>
+
+                <!-- Separador -->
+                <hr class="my-4" style="border-color:#444;" />
+
+                <!-- Registro nuevo usuario -->
+                <p class="text-center">
+                  ¿No tienes cuenta? 
+                  <a href="register.html" class="text-success"><u>Regístrate aquí</u></a>
+                </p>
+
+                <!-- Registro nuevo usuario -->
+                <p class="text-center">
+                  ¿Olvidaste tu contraseña? 
+                  <a href="register.html" class="text-success"><u>Recuperar aquí</u></a>
+                </p>
+
+              </form>
+
+            </div>
+          </div>
+          <!-- Fin tarjeta -->
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- jQuery (requerido por Bootstrap) -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+  <!-- Bootstrap Bundle (con Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Archivo JS principal -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>
+
