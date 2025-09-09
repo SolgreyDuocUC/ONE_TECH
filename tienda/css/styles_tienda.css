@@ -45,7 +45,8 @@ h1, h2, h3, h4{
 
 .product-list > * {
   flex: 1 1 220px;           
-  max-width: 300px;          
+  max-width: 300px;
+            
 }
 
 .product-item {
@@ -78,6 +79,12 @@ h1, h2, h3, h4{
 .product-item button:hover {
   background: #2ecc10;
 }
+
+.product-list {
+  
+}
+
+
 
 
 /*
