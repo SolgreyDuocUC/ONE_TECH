@@ -5,27 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>One-tech-main-page</title>
 
-  <!-- Bootstrap CSS -->
+  <!-- Bootstrap CSS: Acá se va a hacer el llamado a BootStrap para facilitar el manejo de estilos -->
   <link rel="stylesheet" 
         href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" 
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
         crossorigin="anonymous" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- CSS Personalizado -->
+  <!-- CSS Personalizado: Acá se llama a la hoja de estilos -->
   <link rel="stylesheet" href="css/main.css" />
+
+  <!--JS Query de BootStrap para poder realizar ciertos movimientos más "estéticos y asociar elementos al diseño responsive"-->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+
 </head>
 
+<body class="bg-black text-white">
 
-<body>
-
-<!-- Navbar moderna combinada -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm py-3">
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-black shadow-sm py-3">
   <div class="container align-items-center">
 
     <!-- Logo -->
     <a class="navbar-brand d-flex align-items-center" href="#">
       <img src="img/main/One_tech.png" alt="Logo One Tech" width="55" height="55" class="mr-2 rounded">
-      <span class="h4 font-weight-bold mb-0 text-success">ONE TECH</span>
+      <span class="h4 font-weight-bold mb-0 text-accent">ONE TECH</span>
     </a>
 
     <!-- Botón hamburguesa -->
@@ -39,83 +44,144 @@
 
       <!-- Menú central -->
       <ul class="navbar-nav mx-auto">
-        <li class="nav-item"><a class="nav-link text-light" href="#">Home</a></li>
-        <li class="nav-item"><a class="nav-link text-light" href="#">Productos</a></li>
-        <li class="nav-item"><a class="nav-link text-light" href="#">Nosotros</a></li>
-        <li class="nav-item"><a class="nav-link text-light" href="#">Blogs</a></li>
-        <li class="nav-item"><a class="nav-link text-light" href="#">Contacto</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Productos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Nosotros</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Blogs</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
       </ul>
 
       <!-- Carrito-->
-      <a href="#" class="btn btn-success btn-sm rounded-pill mr-3 d-flex align-items-center">
-        🛒 <span class="ml-1">Carrito</span>
+      <a href="#" class="btn btn-accent btn-sm rounded-pill mr-3 d-flex align-items-center">
+        <span class="ml-1">Carrito</span>
       </a>
 
       <!-- Sesión -->
       <div class="d-none d-lg-block">
-        <a href="#" class="text-success mx-2">Iniciar sesión</a>
-        <a href="#" class="text-success mx-2">Registrarse</a>
+        <a href="#" class="text-accent mx-2">Iniciar sesión</a>
+        <a href="#" class="text-accent mx-2">Registrarse</a>
       </div>
     </div>
   </div>
 </nav>
 
-  <!--Tienda Online -->
-  <article class="container my-4">
-    <h2 class="text-success">Tienda Online</h2>
-    <div class="Informacion_tienda text-white">
-      <p>
-        Level-Up Gamer es una tienda online dedicada a satisfacer las necesidades de los entusiastas de los videojuegos en Chile.
-      </p>
-      <p>
-        Lanzada hace dos años como respuesta a la creciente demanda durante la pandemia, Level-Up Gamer ofrece una amplia gama de productos para gamers, desde consolas y accesorios hasta computadores y sillas especializadas. Aunque no cuenta con una ubicación física, realiza despachos a todo el país.
-      </p>
-    </div>
-    <h3 class="text-success">Ver más productos</h3>
+<!-- Carrusel -->
+<div class="container-fluid p-0">
+  <div id="header-carousel" class="carousel slide" data-ride="carousel" data-interval="3000">
+    <div class="carousel-inner">
+      
+      <!-- Primer item activo -->
+      <div class="carousel-item active">
+        <img class="w-100" src="img/main/Banner Carrucel/1.png" alt="Banner 1">
+      </div>
+      
+      <!-- Los demás sin "active" -->
+      <div class="carousel-item">
+        <img class="w-100" src="img/main/Banner Carrucel/2.png" alt="Banner 2">
+      </div>
 
-  <!-- Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-vjEe4kR271WGLpMDp7K3xz78yNnGmEhEMGG8tzGGbUJ0EvnH8PbUMV0BzZ+3OKvE"
-    crossorigin="anonymous"></script>
+      <div class="carousel-item">
+        <img class="w-100" src="img/main/Banner Carrucel/4.png" alt="Banner 4">
+      </div>
 
-    <section class="productos-destacados my-5">
+</div>
+
+<!-- Tienda Online -->
+<article class="container my-4">
+    
+  <h2 class="text-accent"><strong>Tienda Online</strong></h2>
+  <div class="Informacion_tienda">
+    <p>
+      <strong>One Tech</strong> es una tienda online dedicada a satisfacer las necesidades de los entusiastas de los videojuegos en Chile.
+    </p>
+    <p>
+      <strong>Fue lanzada en 2022</strong> como respuesta a la creciente demanda durante la pandemia, One Tech ofrece una amplia gama de productos para gamers: <strong><i>desde consolas y accesorios hasta computadores y sillas especializadas.</i></strong>  Aunque no cuenta con una ubicación física, realiza despachos a todo el país.
+    </p>
+  </div>
+  <h3 class="text-accent">Ver más productos</h3>
+
+    <!-- Botones de control -->
+    <a class="carousel-control-prev" href="#header-carousel" role="button" data-slide="prev">
+      <div class="btn btn-dark gamer-btn">
+        <span class="carousel-control-prev-icon"></span>
+      </div>
+    </a>
+    <a class="carousel-control-next" href="#header-carousel" role="button" data-slide="next">
+      <div class="btn btn-dark gamer-btn">
+        <span class="carousel-control-next-icon"></span>
+      </div>
+    </a>
+  </div>
+</div>
+
+<!-- Productos destacados -->
+<section class="productos-destacados my-5">
   <div class="container">
     <div class="row">
 
       <!-- Producto 1 -->
       <div class="col-md-3 col-sm-6 mb-4">
-        <div class="card bg-dark text-white border-success h-100">
-          <img src="img/productos/tv1.jpg" class="card-img-top" alt="Smart TV 1">
+        <div class="card gamer-card h-100">
+          <img src="img/productos/JM001 Juegos de Mesa Catan.webp" class="card-img-top" alt="Los Colonos de Catan">
           <div class="card-body">
-            <h5 class="card-title">Smart TV Samsung 55"</h5>
-            <p class="card-text">Resolución 4K UHD, HDR, Tizen OS.</p>
-            <p class="text-success font-weight-bold">$499.990</p>
-            <a href="#" class="btn btn-success btn-sm">Ver más</a>
+            <h5 class="card-title">JM001 Juegos de Mesa Catan</h5>
+            <p class="card-text"><strong>Los Colonos de Catan:</strong> Un clásico juego de estrategia donde los jugadores compiten por colonizar y expandirse en la isla de Catan. Ideal para 3-4 jugadores y perfecto para noches de juego en familia o con amigos.</p>
+            <p class="text-accent font-weight-bold">$29.990 CLP</p>
+            <a href="#" class="btn btn-accent btn-sm">Ver más</a>
           </div>
         </div>
       </div>
 
       <!-- Producto 2 -->
       <div class="col-md-3 col-sm-6 mb-4">
-        <div class="card bg-dark text-white border-success h-100">
-          <img src="img/productos/tv2.jpg" class="card-img-top" alt="Smart TV 2">
+        <div class="card gamer-card h-100">
+          <img src="IMG/productos/AC001 Accesorios Controlador Inalámbrico Xbox Series X.webp" class="card-img-top" alt="Xbox Series X">
           <div class="card-body">
-            <h5 class="card-title">LG OLED 48"</h5>
-            <p class="card-text">OLED 4K, Dolby Vision, HDMI 2.1.</p>
-            <p class="text-success font-weight-bold">$699.990</p>
-            <a href="#" class="btn btn-success btn-sm">Ver más</a>
+            <h5 class="card-title">AC001 Accesorios Controlador Inalámbrico Xbox Series X</h5>
+            <p class="card-text"><strong>XBOX CONTROL INALAMBRICO SUNDOWN CARBON BLACK:</strong> Ofrece una experiencia de juego cómoda con botones mapeables y una respuesta táctil mejorada. Compatible con consolas Xbox y PC.</p>
+            <p class="text-accent font-weight-bold">$59.990 CLP</p>
+            <a href="#" class="btn btn-accent btn-sm">Ver más</a>
           </div>
         </div>
       </div>
 
-      <!-- Repite más productos aquí... -->
+      <!-- Producto 3 -->
+      <div class="col-md-3 col-sm-6 mb-4">
+        <div class="card gamer-card h-100">
+          <img src="IMG/productos/SG001 Sillas Gamers Silla Gamer Secretlab Titan.webp" class="card-img-top" alt="Secretlab TITAN Evo">
+          <div class="card-body">
+            <h5 class="card-title">SG001 Sillas Gamers Silla Gamer Secretlab Titan</h5>
+            <p class="card-text"><strong>Secretlab TITAN Evo:</strong> Diseñada para el máximo confort, esta silla ofrece un soporte ergonómico y personalización ajustable para sesiones de juego prolongadas.</p>
+            <p class="text-accent font-weight-bold">$349.990 CLP</p>
+            <a href="#" class="btn btn-accent btn-sm">Ver más</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Producto 4 -->
+      <div class="col-md-3 col-sm-6 mb-4">
+        <div class="card gamer-card h-100">
+          <img src="IMG/productos/MS001 Mouse Mouse Gamer Logitech G502 HERO.webp" class="card-img-top" alt="G502">
+          <div class="card-body">
+            <h5 class="card-title">MS001 Mouse Mouse Gamer Logitech G502 HERO</h5>
+            <p class="card-text"><strong>G502:</strong> Con sensor de alta precisión y botones personalizables, este mouse es ideal para gamers que buscan un control preciso y personalización.</p>
+            <p class="text-accent font-weight-bold">$59.990 CLP</p>
+            <a href="#" class="btn btn-accent btn-sm">Ver más</a>
+          </div>
+        </div>
+      </div>
 
     </div>
   </div>
 </section>
+
+<!-- Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+  crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-vjEe4kR271WGLpMDp7K3xz78yNnGmEhEMGG8tzGGbUJ0EvnH8PbUMV0BzZ+3OKvE"
+  crossorigin="anonymous"></script>
 
 </body>
 </html>
