@@ -1,0 +1,107 @@
+.head_contact_us {
+    background: #000000;
+    background-color: #000000;
+    color: #ffffff;
+    font-family: "Roboto", Arial, sans-serif;
+    margin: 0;
+}
+.formula_contact_us {
+    background: #000000;
+    background-color: #000000;
+    color: #ffffff;
+    font-family: "Roboto", Arial, sans-serif;
+    margin: 0;
+}
+h1, h2, h3 {
+    font-family: "Orbitron", sans-serif;
+    background-color: #000000;
+}
+a {
+    color: #d3d3d3;
+    background-color: #000000;
+    text-decoration: none;
+    margin: 0 5px;
+}
+a:hover {
+    color: #1e90ff;
+    background-color: #000000;
+}
+form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #000000;
+}
+label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #d3d3d3;
+}
+input, textarea {
+    background-color: #000000;  
+  color: #FFFFFF;             
+  border: 1px solid #1E90FF;  
+  border-radius: 0;           
+  padding: 10px;
+  outline: none;
+}
+input::placeholder, textarea::placeholder {
+    color: #D3D3D3;
+    
+}
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #D3D3D3;
+}
+button:hover, input[type="submit"]:hover {
+    background: #39ff14;
+    color: #000000;
+}
+.button_confirmar {
+    background-attachment: fixed;
+    background-color: #39ff14;
+    margin-top: 30px;
+}
+.row_mb-3 {
+    background-color: #000000;
+}
+.titulo {
+    color: #1e90ff;
+    font-family: "Orbitron", sans-serif;
+
+}
+.formulario_contacto{
+    background-color: #000000;
+    background: #000000;
+    
+}
+.formulario-titulo {
+    border: 2px solid #39ff14;
+    border-radius: 8px;
+    padding: 10px 0;
+    margin: 15px 0;
+    text-align: center;
+    color: #39ff14;
+    background: #000;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.header-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.header-flex h1 {
+    margin: 0;
+}
+
+.header-flex nav {
+    display: flex;
+    align-items: center;
+}
+
+.header-flex a {
+    margin: 0 8px;
+}
