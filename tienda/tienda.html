@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en">http://127.0.0.1:3000/tienda/tienda.html#
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,29 +7,55 @@
     <link rel="stylesheet" href="css/styles_tienda.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     
+    <style>
+        /* Barra de navegación */
+
+
+    </style>
 </head>
 <body>
-    <header class="main-header">
-        <div class="flex-header">
-        <h1>OneTech</h1>
-        <nav>
-            <a href="asserts/scripts/main.html">Inicio </a><a>|</a>
-            <a href="tienda.html">Productos </a><a>|</a>
-            <a href="contacto.html">Nosotros </a><a>|</a>
-            <a href="carrito.html">Blog </a><a>|</a>
-            <a href="carrito.html">Contacto </a>
-        </nav>
-        </div>
-    </header>
-    <article>
-        <h2>Bienvenido a OneTech</h2>
-        <p>Tu tienda en línea para los mejores productos tecnológicos.</p>
-        <div class= "oferta">
-            <nav>
-                <h2>¡Aprovecha un 20% de descuento en Auriculares HyperX Cloud Alpha!</h2>
-                <img src="" alt="">
-        </a>
-        </nav>
+<!-- Barra de navegación principal -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-black shadow-sm py-3">
+  <div class="container">
+
+    <!-- Logo -->
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="img/main/One_tech.png" alt="Logo One Tech" width="55" height="55" class="mr-2 rounded">
+      <span class="h4 font-weight-bold mb-0 text-success">ONE TECH</span>
+    </a>
+
+    <!-- Botón hamburguesa para móviles -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent"
+      aria-controls="navbarContent" aria-expanded="false" aria-label="Mostrar menú">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Menú de navegación -->
+    <div class="collapse navbar-collapse" id="navbarContent">
+
+      <!-- Enlaces principales -->
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="tienda/tienda.html">Productos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Nosotros</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
+      </ul>
+
+      <!-- Botón Carrito con contador -->
+      <a href="#" class="btn btn-success btn-sm rounded-pill mr-3 position-relative">
+        🛒 Carrito
+        <span id="cart-count" class="badge badge-light text-dark position-absolute" style="top: -8px; right: -10px; font-size: 12px;">0</span>
+      </a>
+
+      <!-- Enlaces de sesión -->
+      <div class="d-none d-lg-block">
+        <a href="login.html" class="text-success mx-2">Iniciar sesión</a>
+        <a href="register.html" class="text-success mx-2">Registrarse</a>
+      </div>
+    </div>
+  </div>
+</nav>
 
      </div>
         <section class="product-list">

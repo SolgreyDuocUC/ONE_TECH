@@ -38,4 +38,23 @@ body {
   box-shadow: 0 0 10px #00ff99;
 }
 
+.mensaje {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #4CAF50; /* verde éxito */
+  color: white;
+  padding: 15px 25px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 10px rgba(0,0,0,0.2);
+  display: none;
+  z-index: 1000;
+  font-family: Arial, sans-serif;
+}
+
+.mensaje.error {
+  background-color: #f44336; /* rojo error */
+}
+
+
 
