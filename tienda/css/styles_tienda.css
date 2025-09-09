@@ -1,0 +1,97 @@
+body{ 
+    background: #000;
+    color: #fff;
+    font-family: 'Roboto', Arial, sans-serif;
+    margin:0;
+}
+.main-header { 
+  background:#111; 
+  border-bottom:2px solid #39FF14; 
+}
+h1, h2, h3, h4{
+    font-family: 'Orbitron', sans-serif; /* Fuente para encabezados */
+
+}
+
+.flex-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 32px;
+}
+.flex-header h1{ 
+  margin:0; 
+  color:#39FF14; 
+  font-size:2rem; }
+.flex-header nav{ 
+  display:flex; 
+  align-items:center; 
+  gap:12px; }
+.flex-header a{ 
+  color:#d3d3d3; 
+  text-decoration:none; 
+  font-weight:500; 
+}
+.flex-header a:hover{ 
+    color:#39FF14; 
+}
+.product-list {
+  display: flex;
+  flex-wrap: wrap;           
+  gap: 24px;                 
+  justify-content: center;   
+  align-items: flex-start;   
+}
+
+.product-list > * {
+  flex: 1 1 220px;           
+  max-width: 300px;          
+}
+
+.product-item {
+  background: #181818;
+  border-radius: 12px;
+  padding: 16px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 220px;
+  max-width: 300px;
+  width: 100%;
+}
+.product-item img {
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+.product-item button {
+  margin-top: 10px;
+  background: #39FF14;
+  color: #111;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.product-item button:hover {
+  background: #2ecc10;
+}
+
+
+/*
+Fuente Principal:
+o Roboto, una fuente sans-serif moderna y legible para todo el texto general.
+o https://fonts.google.com/specimen/Roboto
+❖ Fuente de Encabezado:
+o Orbitron, una fuente futurista que resalta los títulos y encabezados.
+o https://fonts.google.com/specimen/Orbitron
+*/
+
+/*
+Texto Principal:
+o Blanco (#FFFFFF) para asegurar un buen contraste sobre el fondo oscuro.
+❖ Texto Secundario:
+o Gris Claro (#D3D3D3) para descripciones y texto secundario.
+*/
