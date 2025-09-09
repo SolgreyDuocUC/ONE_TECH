@@ -1,6 +1,143 @@
-body{
+/* Estilos generales */
+body {
     background-color: #000000;
-    font-family: 'roboto', sans-serif;
-    color: #FFFFFF; 
-    margin: 2%;
+    font-family: 'Roboto', sans-serif;
+    color: #FFFFFF;
+    margin: 0; /* Quitamos márgenes que afectan responsive */
+    padding: 0;
 }
+
+/*Contenedor del carrito */
+.carrito-container {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 0;
+    text-align: left;
+}
+
+.Informacion_tienda{
+    margin: 5%;
+    text-align: justify;
+    font-family: 'Roboto', sans-serif;
+    color: #FFFFFF;
+    font-size: 16pt;
+}
+
+.carrito-container a {
+    color: #008346;
+    font-size: 1.2rem;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.carrito-container a:hover {
+    color: #FFFFFF;
+}
+
+
+.INICIO_SESION_REGISTRO {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 0;
+    display: flex;
+    justify-content: right;
+    flex-wrap: wrap;
+}
+
+.INICIO_SESION_REGISTRO a {
+    color: #008346;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.INICIO_SESION_REGISTRO a:hover {
+    color: #FFFFFF;
+}
+
+/* Estilo para los títulos */
+h2, h3 {
+    color: #008346;
+}
+
+/* ✅ Responsive para textos y paddings */
+@media (max-width: 768px) {
+    .carrito-container {
+        text-align: center;
+    }
+
+    .INICIO_SESION_REGISTRO {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .INICIO_SESION_REGISTRO a {
+        margin: 5px 0;
+    }
+
+    h1 {
+        font-size: 1.8rem !important;
+    }
+}
+
+.card {
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.navbar-dark .nav-link {
+  color: #ccc;
+}
+
+.navbar-dark .nav-link:hover {
+  color: #fff;
+}
+
+.bg-black {
+  background-color: #000;
+}
+
+/* Espaciado de elementos */
+.navbar-nav .nav-link {
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+/* Buscador moderno */
+.form-control-sm {
+  height: calc(1.8em + 0.75rem + 2px);
+  font-size: 0.9rem;
+}
+
+/* Sombra navbar moderna */
+.navbar {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+}
+
+/* Carrito con ícono */
+.btn-success span {
+  font-weight: 500;
+}
+
+/* Responsivo: alinea al centro todo en móviles */
+@media (max-width: 768px) {
+  .navbar-nav {
+    text-align: center;
+  }
+  .form-inline {
+    justify-content: center;
+  }
+}
+
+
+

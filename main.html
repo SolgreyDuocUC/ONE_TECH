@@ -1,86 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>One-tech-main-page</title>
-    <!--Link de BootStrap-->
-    <link rel="stylesheet" 
-    href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" 
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
-    crossorigin="anonymous">
-    <!--Link de Css para estilo-->
-    <link rel="stylesheet"
-    href="css/main.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>One-tech-main-page</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" 
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+        crossorigin="anonymous" />
+
+  <!-- CSS Personalizado -->
+  <link rel="stylesheet" href="css/main.css" />
 </head>
+
+
 <body>
 
-<article>
-<div class="HEAD_CONTAINER">
-<!--Cabecera de la página-->
+<!-- Navbar moderna combinada -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm py-3">
+  <div class="container align-items-center">
 
-<h1>ONE TECH</h1>
-<img src="content/One_tech.png" width="200" height="200">
+    <!-- Logo -->
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="img/main/One_tech.png" alt="Logo One Tech" width="55" height="55" class="mr-2 rounded">
+      <span class="h4 font-weight-bold mb-0 text-success">ONE TECH</span>
+    </a>
 
-    <!--Barra de navegación-->
+    <!-- Botón hamburguesa -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent"
+      aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-    <nav>
-        <a href="#">HOME</a>
-        <a href="#">PRODUCTOS</a>
-        <a href="#">NOSOTROS</a>
-        <a href="#">BLOGS</a>
-        <a href="#">CONTACTO</a>
-    </nav>
+    <!-- Menú -->
+    <div class="collapse navbar-collapse" id="navbarContent">
 
-    <!--Carrito de compras-->
-    <h2>
-        <a href="#">
-        CARRITO DE COMPRAS
-        </a>
-    </h2>
+      <!-- Menú central -->
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item"><a class="nav-link text-light" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link text-light" href="#">Productos</a></li>
+        <li class="nav-item"><a class="nav-link text-light" href="#">Nosotros</a></li>
+        <li class="nav-item"><a class="nav-link text-light" href="#">Blogs</a></li>
+        <li class="nav-item"><a class="nav-link text-light" href="#">Contacto</a></li>
+      </ul>
 
-</div>
-</article>
+      <!-- Carrito -->
+      <a href="#" class="btn btn-success btn-sm rounded-pill mr-3 d-flex align-items-center">
+        🛒 <span class="ml-1">Carrito</span>
+      </a>
 
-<!--Sección de Inicio de Sesión-->
-<article>
-<div class="INICIO_SESION_REGISTRO">
-
-    <nav>
-    <a href="#">INICIAR SESIÓN</a>
-    <a href="#">REGISTRARSE</a>
-    </nav>
-
-</div>
-</article>
-
-<!--Seción de Tienda Online y ver más productos-->
-
-<article>
-
-    <h2>Tienda Online</h2>
-    <div class="Informacion_tienda">
-        <p>
-        Level-Up Gamer es una tienda online dedicada a satisfacer las necesidades de los entusiastas de los videojuegos en Chile. 
-        </p>
-        <p>
-        Lanzada hace dos años como respuesta a la creciente demanda durante la pandemia, Leves-Up Gamer ofrece una amplia gama de productos para gamers, desde consolas y accesorios hasta computadores y sillas especializadas. Aunque no cuenta con una ubicación física, realiza despachos a todo el país.
-        </p>
+      <!-- Sesión -->
+      <div class="d-none d-lg-block">
+        <a href="#" class="text-success mx-2">Iniciar sesión</a>
+        <a href="#" class="text-success mx-2">Registrarse</a>
+      </div>
     </div>
-    <h3>Ver más productos</h3>
-        <!--Agregar imagenes carrucel-->
+  </div>
+</nav>
 
-</article>
+  <!--Tienda Online -->
+  <article class="container my-4">
+    <h2 class="text-success">Tienda Online</h2>
+    <div class="Informacion_tienda text-white">
+      <p>
+        Level-Up Gamer es una tienda online dedicada a satisfacer las necesidades de los entusiastas de los videojuegos en Chile.
+      </p>
+      <p>
+        Lanzada hace dos años como respuesta a la creciente demanda durante la pandemia, Level-Up Gamer ofrece una amplia gama de productos para gamers, desde consolas y accesorios hasta computadores y sillas especializadas. Aunque no cuenta con una ubicación física, realiza despachos a todo el país.
+      </p>
+    </div>
+    <h3 class="text-success">Ver más productos</h3>
 
-<!--Cajas de productos-->
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-vjEe4kR271WGLpMDp7K3xz78yNnGmEhEMGG8tzGGbUJ0EvnH8PbUMV0BzZ+3OKvE"
+    crossorigin="anonymous"></script>
 
+    <section class="productos-destacados my-5">
+  <div class="container">
+    <div class="row">
 
+      <!-- Producto 1 -->
+      <div class="col-md-3 col-sm-6 mb-4">
+        <div class="card bg-dark text-white border-success h-100">
+          <img src="img/productos/tv1.jpg" class="card-img-top" alt="Smart TV 1">
+          <div class="card-body">
+            <h5 class="card-title">Smart TV Samsung 55"</h5>
+            <p class="card-text">Resolución 4K UHD, HDR, Tizen OS.</p>
+            <p class="text-success font-weight-bold">$499.990</p>
+            <a href="#" class="btn btn-success btn-sm">Ver más</a>
+          </div>
+        </div>
+      </div>
 
-<!--Pie de página:
-    -Medios de pago
-    -Datos de contacto
-    -Barra de navegación de las categorias
-    -Ingreso de datos para novedades (Ingresar correo)-->
-    
+      <!-- Producto 2 -->
+      <div class="col-md-3 col-sm-6 mb-4">
+        <div class="card bg-dark text-white border-success h-100">
+          <img src="img/productos/tv2.jpg" class="card-img-top" alt="Smart TV 2">
+          <div class="card-body">
+            <h5 class="card-title">LG OLED 48"</h5>
+            <p class="card-text">OLED 4K, Dolby Vision, HDMI 2.1.</p>
+            <p class="text-success font-weight-bold">$699.990</p>
+            <a href="#" class="btn btn-success btn-sm">Ver más</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Repite más productos aquí... -->
+
+    </div>
+  </div>
+</section>
+
 </body>
 </html>
