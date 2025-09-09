@@ -1,36 +1,96 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* =========================
+   ONE TECH - Estilo Productos Gamer
+   ========================= */
+
+/* Estilos base */
+body {
+  background-color: #0a0a0a;
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+  margin: 0;
+  padding: 0;
 }
 
-.main-header {
-    color: #d3d3d3;
-    font-family: 'Roboto', sans-serif; /* Fuente principal */
-    background-color: #121212; /* Fondo oscuro */
-    padding: 20px;
-
+/* Colores acento neon */
+.text-accent {
+  color: #00ff88; /* Verde neón */
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Orbitron', sans-serif; /* Fuente para encabezados */
-
+.btn-accent {
+  background-color: #00ff88;
+  color: #000;
+  border: none;
+  transition: 0.3s ease;
+}
+.btn-accent:hover {
+  background-color: #7a00ff;
+  color: #fff;
+  transform: scale(1.05);
 }
 
+/* Tarjetas gamer */
+.gamer-card {
+  background-color: #111;
+  color: #fff;
+  border: 1px solid #00ff88;
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.gamer-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 20px #00ff88;
+}
 
+/* Imagenes de productos */
+.card-img-top {
+  height: 220px;
+  object-fit: cover;
+  border-bottom: 1px solid #00ff88;
+}
 
-/*
-Fuente Principal:
-o Roboto, una fuente sans-serif moderna y legible para todo el texto general.
-o https://fonts.google.com/specimen/Roboto
-❖ Fuente de Encabezado:
-o Orbitron, una fuente futurista que resalta los títulos y encabezados.
-o https://fonts.google.com/specimen/Orbitron
-*/
+/* Navbar */
+.navbar-dark .nav-link {
+  color: #ccc;
+  transition: color 0.3s ease;
+}
+.navbar-dark .nav-link:hover {
+  color: #00ff88;
+}
 
-/*
-Texto Principal:
-o Blanco (#FFFFFF) para asegurar un buen contraste sobre el fondo oscuro.
-❖ Texto Secundario:
-o Gris Claro (#D3D3D3) para descripciones y texto secundario.
-*/
+/* Footer */
+footer {
+  border-top: 1px solid #00ff88;
+  font-size: 0.9rem;
+}
+
+/* Botón volver arriba */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 999;
+  background-color: #00ff88;
+  color: #000;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s ease;
+}
+.back-to-top:hover {
+  background-color: #7a00ff;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .gamer-card {
+    margin-bottom: 20px;
+  }
+  .navbar-nav {
+    text-align: center;
+  }
+}
