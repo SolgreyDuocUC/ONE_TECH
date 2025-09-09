@@ -90,3 +90,16 @@ document.addEventListener("DOMContentLoaded", () => {
     form.reset();
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  if (document.getElementById("formRegistro")) {
+    // código de registro
+  }
+  if (document.getElementById("formLogin")) {
+    // código de login
+  }
+  if (document.getElementById("formRecuperar")) {
+    // código de recuperación
+  }
+});
+

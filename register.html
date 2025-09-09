@@ -62,42 +62,42 @@
                   <input type="text" id="direccion" name="direccion" class="form-control form-control-lg" placeholder="Calle, número, depto." required />
                 </div>
 
-                <!-- Región:
-                    Región de Arica y Parinacota: (Capital: Arica)
-                    Región de Tarapacá: (Capital: Iquique)
+                <!-- Regiones y comunas -->
 
-                    Región de Atacama: (Capital: Copiapó)
-                    Región de Coquimbo: (Capital: La Serena)
-
-                    Región del Libertador General Bernardo O'Higgins: (Capital: Rancagua)
-                    Región del Maule: (Capital: Talca)
-                    Región de Ñuble: (Capital: Chillán)
-
-
-                    Región de Los Ríos: (Capital: Valdivia)
-                    Región de Los Lagos: (Capital: Puerto Montt)
-                    Región de Aysén del General Ibáñez del Campo: (Capital: Coyhaique)
-
-                -->
                 <div class="form-group mb-4">
                   <label for="region">Región</label>
-                  <select id="region" name="region" class="form-control form-control-lg" required>
-                    <option value="">Seleccione región</option>
-                    <option>Región Metropolitana</option>
-                    <option>Región de Valparaíso</option>
-                    <option>Región del Biobío</option>
-                    <option>Región de La Araucanía</option>
-                    <option>Región de Antofagasta</option>
-                    <option>Región de Magallanes y la Antártica Chilena</option>
-
+                  <select id="region" class="form-control form-control-lg" required>
+                    <option value="">Seleccione una región</option>
+                    <option value="Arica y Parinacota">Región de Arica y Parinacota</option>
+                    <option value="Tarapacá">Región de Tarapacá</option>
+                    <option value="Antofagasta">Región de Antofagasta</option>
+                    <option value="Atacama">Región de Atacama</option>
+                    <option value="Coquimbo">Región de Coquimbo</option>
+                    <option value="Valparaíso">Región de Valparaíso</option>
+                    <option value="Metropolitana">Región Metropolitana de Santiago</option>
+                    <option value="O'Higgins">Región del Libertador General Bernardo O'Higgins</option>
+                    <option value="Maule">Región del Maule</option>
+                    <option value="Ñuble">Región de Ñuble</option>
+                    <option value="Biobío">Región del Biobío</option>
+                    <option value="Araucanía">Región de La Araucanía</option>
+                    <option value="Los Ríos">Región de Los Ríos</option>
+                    <option value="Los Lagos">Región de Los Lagos</option>
+                    <option value="Aysén">Región de Aysén del General Carlos Ibáñez del Campo</option>
+                    <option value="Magallanes">Región de Magallanes y la Antártica Chilena</option>
                   </select>
                 </div>
 
-                <!-- Comuna -->
                 <div class="form-group mb-4">
                   <label for="comuna">Comuna</label>
-                  <input type="text" id="comuna" name="comuna" class="form-control form-control-lg" required />
+                  <select id="comuna" class="form-control form-control-lg" required>
+                    <option value="">Seleccione una comuna</option>
+                  </select>
                 </div>
+
+                <script src="js/regionesComunas.js"></script>
+
+                <!-- Archivo JS para comunas -->
+                <script src="js/comunas.js"></script>
 
                 <!-- Contraseña -->
                 <div class="form-group mb-4">
