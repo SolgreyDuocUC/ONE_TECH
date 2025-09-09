@@ -12,27 +12,81 @@ h1, h2, h3, h4{
     font-family: 'Orbitron', sans-serif; /* Fuente para encabezados */
 
 }
+/* Barra de navegación */
+.navbar {
+  position: fixed; /* Fija la barra en la parte superior */
+  top: 0; /* Posición en la parte superior */
+  width: 100%; /* Ocupa todo el ancho */
+  z-index: 1000; /* Asegura que esté por encima de otros elementos */
+  background-color: #000; /* Fondo negro */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  display: flex; /* Alinea los elementos horizontalmente */
+  align-items: center; /* Centra los elementos verticalmente */
+  justify-content: space-between; /* Espacia los elementos de lado a lado */
+  padding: 0 20px; /* Espaciado interno */
+}
 
-.flex-header{
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  margin-right: auto; /* Empuja el logo hacia la izquierda */
+}
+
+.navbar-nav {
+  display: flex; /* Alinea los enlaces horizontalmente */
+  gap: 20px; /* Espaciado entre enlaces */
+}
+
+.navbar-brand .text-success {
+  color: #00ff88; /* Verde neón para el texto del logo */
+}
+
+.nav-link {
+  color: #ccc; /* Color gris claro para los enlaces */
+  transition: color 0.3s ease; /* Transición suave al cambiar el color */
+}
+
+.nav-link:hover {
+  color: #00ff88; /* Verde neón al pasar el mouse */
+}
+
+.btn-success {
+  background-color: #00ff88; /* Verde neón para el botón */
+  color: #000; /* Texto negro */
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-success:hover {
+  background-color: #7a00ff; /* Morado al pasar el mouse */
+  color: #fff; /* Texto blanco */
+}
+
+.badge-light {
+  background-color: #fff; /* Fondo blanco para el contador */
+  color: #000; /* Texto negro */
+}
+
+.navbar-dark .nav-link {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 16px 32px;
 }
-.flex-header h1{ 
+.navbar-dark  h1{ 
   margin:0; 
   color:#39FF14; 
   font-size:2rem; }
-.flex-header nav{ 
+.navbar-dark  nav{ 
   display:flex; 
   align-items:center; 
   gap:12px; }
-.flex-header a{ 
+.navbar-dark  a{ 
   color:#d3d3d3; 
   text-decoration:none; 
   font-weight:500; 
 }
-.flex-header a:hover{ 
+.navbar-dark  a:hover{ 
     color:#39FF14; 
 }
 .product-list {
@@ -76,15 +130,6 @@ h1, h2, h3, h4{
   cursor: pointer;
   transition: background 0.2s;
 }
-.product-item button:hover {
-  background: #2ecc10;
-}
-
-.product-list {
-  
-}
-
-
 
 
 /*
