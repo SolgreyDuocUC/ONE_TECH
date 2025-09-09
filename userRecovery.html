@@ -3,34 +3,39 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>OneTech - Inicio de Sesión</title>
+  <title>OneTech - Recuperar Contraseña</title>
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
   <!-- Estilos personalizados -->
-  <link rel="stylesheet" href="css/login.css" />
+  <link rel="stylesheet" href="css/userReg.css" />
 </head>
 
 <body class="bg-dark text-white">
 
-  <!-- Sección principal de inicio de sesión -->
+  <!-- Sección principal de recuperación -->
   <section class="h-100 gradient-gamer">
     <div class="container py-5 h-100">
       <div class="row d-flex justify-content-center align-items-center h-100">
         <div class="col-12 col-md-8 col-lg-6">
-          
+
           <!-- Tarjeta del formulario -->
           <div class="card text-white" style="border-radius: 15px; background-color: #1c1c1c;">
             <div class="card-body p-5">
-              
+
               <!-- Título -->
-              <h3 class="fw-normal mb-5 text-center" style="color: #00ff99;">
-                <strong>INICIO DE SESIÓN</strong>
+              <h3 class="fw-normal mb-4 text-center" style="color: #00ff99;">
+                <strong>RECUPERAR CONTRASEÑA</strong>
               </h3>
 
+              <!-- Instrucciones -->
+              <p class="text-center mb-4">
+                Ingresa tu correo electrónico registrado y te enviaremos un enlace para restablecer tu contraseña.
+              </p>
+
               <!-- Formulario -->
-              <form id="formLogin">
+              <form id="formRecuperar">
 
                 <!-- Correo electrónico -->
                 <div class="form-group mb-4">
@@ -38,38 +43,28 @@
                   <input type="email" id="correo" name="correo" class="form-control form-control-lg" required />
                 </div>
 
-                <!-- Contraseña -->
+                <!-- Opcional: RUT para mayor seguridad -->
                 <div class="form-group mb-4">
-                  <label for="password">Contraseña</label>
-                  <input type="password" id="password" name="password" class="form-control form-control-lg" required />
+                  <label for="rut">RUT (opcional)</label>
+                  <input type="text" id="rut" name="rut" class="form-control form-control-lg" placeholder="Ej: 12.345.678-9" />
                 </div>
 
-                <!-- Recordarme -->
-                <div class="form-check mb-4">
-                  <input class="form-check-input" type="checkbox" value="" id="recordarme" />
-                  <label class="form-check-label" for="recordarme">
-                    Recordarme en este dispositivo
-                  </label>
-                </div>
-
-                <!-- Botón Ingresar -->
+                <!-- Botón enviar -->
                 <button type="submit" class="btn btn-lg w-100 gamer-btn">
-                  Ingresar
+                  Enviar enlace
                 </button>
 
                 <!-- Separador -->
                 <hr class="my-4" style="border-color:#444;" />
 
-                <!-- Registro nuevo usuario -->
+                <!-- Enlaces de ayuda -->
                 <p class="text-center">
-                  ¿No tienes cuenta? 
-                  <a href="register.html" class="text-success"><u>Regístrate aquí</u></a>
+                  ¿Recordaste tu contraseña?  
+                  <a href="login.html" class="text-success"><u>Inicia sesión</u></a>
                 </p>
-
-                <!-- Recuperación de contraseña -->
                 <p class="text-center">
-                  ¿Olvidaste tu contraseña? 
-                  <a href="userRecovery.html" class="text-success"><u>Recuperar aquí</u></a>
+                  ¿No tienes cuenta?  
+                  <a href="registro.html" class="text-success"><u>Regístrate aquí</u></a>
                 </p>
 
               </form>
@@ -94,4 +89,3 @@
 
 </body>
 </html>
-
