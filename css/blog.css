@@ -1,0 +1,74 @@
+body {
+  background-color: #000; /* Fondo negro gamer */
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+/* Colores de acento personalizados */
+.text-accent {
+  color: #00ff88; /* Verde neón */
+}
+
+.btn-accent {
+  background-color: #00ff88;
+  color: #000;
+  border: none;
+  transition: 0.3s ease;
+}
+.btn-accent:hover {
+  background-color: #7a00ff; /* Morado para hover */
+  color: #fff;
+}
+.titulo-noticias {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 2.5rem;
+  letter-spacing: 1px;
+}
+
+.bloque-noticia {
+  background: #222;
+  border-radius: 8px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.bloque-noticia .noticia-info {
+  color: #fff;
+}
+
+.bloque-noticia .noticia-titulo {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.bloque-noticia .noticia-desc {
+  margin-bottom: 1.5rem;
+}
+
+.bloque-noticia .noticia-btn {
+  border: 2px solid #fff;
+  color: #fff;
+  background: transparent;
+  font-weight: bold;
+  padding: 0.5rem 1.5rem;
+}
+
+.bloque-noticia .noticia-btn:hover {
+  background: #fff;
+  color: #222;
+}
+
+.bloque-noticia .noticia-img {
+  width: 320px;
+  height: 200px;
+  background: #444;
+  border: 2px solid #00ff88;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 2.5rem;
+}
