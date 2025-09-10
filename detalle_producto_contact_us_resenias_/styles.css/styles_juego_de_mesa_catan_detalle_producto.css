@@ -54,6 +54,29 @@ body{
 .breadcrumb a:last-child{ color:#fff; 
     text-decoration:none; 
     font-weight:700; 
+    
+}
+
+.breadcrumb{
+  background-color: transparent !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  margin: 0 0 16px 0 !important;
+  box-shadow: none !important;
+}
+
+.breadcrumb a{ 
+  color:#39ff14 !important; 
+  text-decoration: underline; 
+}
+.breadcrumb a:last-child{
+  color:#fff !important; 
+  text-decoration: none; 
+  font-weight:700;
+}
+
+.breadcrumb-item + .breadcrumb-item::before{
+  color:#39ff14 !important;
 }
 
 
@@ -270,6 +293,21 @@ body{
 
 .reviews.reviews-static .reviews-tab{ cursor: default; }
 .reviews.reviews-static .reviews-body{ display: none; }
+
+/* --- Overrides ONE TECH (Catan) --- */
+.thumbnails img:hover{ border-color:#39ff14; }
+.btn.btn-primary:hover{ background:#39ff14; color:#000; }
+.rating-number{ color:#39ff14; }
+.reviews-tab:hover{ border-color:#39ff14; box-shadow:0 0 0 2px rgba(57,255,20,.18) inset; }
+
+/* Footer igual al resto */
+#site-footer .footer-links{ list-style:none; margin:0; padding-left:0; }
+#site-footer .footer-links li{ margin:6px 0; }
+#site-footer .link-muted{ color:#d3d3d3; text-decoration:none; }
+#site-footer .link-muted:hover{ color:#39ff14; }
+#site-footer .text-accent, #site-footer h5, #site-footer h6{ color:#39ff14 !important; }
+
+
 
 @media (max-width: 900px){
   #catan-details{ padding:16px; }

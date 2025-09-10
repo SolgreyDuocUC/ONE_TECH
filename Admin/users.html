@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Usuarios — Admin</title>
+  <link rel="stylesheet" href="/Admin/style_admin/style_users.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">ONE TECH <span>Admin</span></div>
+      <nav class="menu">
+        <a href="dashboard.html">📊 Dashboard</a>
+        <a class="active" href="users.html">👥 Usuarios</a>
+        <a href="products.html">📦 Productos</a>
+        <a href="settings.html">⚙️ Configuración</a>
+      </nav>
+      <div class="sidebar-footer"><a class="logout" href="/login.html">Cerrar sesión</a></div>
+    </aside>
+
+    <main class="content">
+      <header class="topbar">
+        <h1>Usuarios</h1>
+        <button class="btn" id="btn-new">Nuevo usuario</button>
+      </header>
+
+      <section class="panel">
+        <div class="table-wrap">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Fecha</th><th>RUT</th><th>Nombre</th><th>Correo</th><th>Teléfono</th><th>Región</th><th>Comuna</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>2025-09-01</td><td>12.345.678-5</td><td>Amaro Carvajal</td><td>amaro.c@correo.cl</td><td>+56 9 5555 0001</td><td>Valparaíso</td><td>Valparaíso</td></tr>
+              <tr><td>2025-08-28</td><td>16.987.321-9</td><td>Daniela Riquelme</td><td>daniela.r@correo.cl</td><td>+56 9 5555 0002</td><td>Valparaíso</td><td>Valparaíso</td></tr>
+              <tr><td>2025-08-20</td><td>18.222.111-6</td><td>Tomás Pizarro</td><td>t.pizarro@correo.cl</td><td>+56 9 5555 0003</td><td>Valparaíso</td><td>Valparaíso</td></tr>
+              <tr><td>2025-08-11</td><td>21.334.556-0</td><td>Rocío Herrera</td><td>rocio.h@correo.cl</td><td>+56 9 5555 0004</td><td>Valparaíso</td><td>Valparaíso</td></tr>
+              <tr><td>2025-07-30</td><td>14.998.700-2</td><td>Felipe Zamora</td><td>felipez@correo.cl</td><td>+56 9 5555 0005</td><td>Valparaíso</td><td>Valparaíso</td></tr>
+              <tr><td>2025-07-22</td><td>19.765.432-1</td><td>Camila Toro</td><td>c.toro@correo.cl</td><td>+56 9 5555 0006</td><td>Valparaíso</td><td>Valparaíso</td></tr>
+              <tr><td>2025-07-15</td><td>17.101.909-3</td><td>Ignacio Godoy</td><td>ignacio.g@correo.cl</td><td>+56 9 5555 0007</td><td>Valparaíso</td><td>Valparaíso</td></tr>
+              <tr><td>2025-07-08</td><td>15.600.777-8</td><td>Valentina Ríos</td><td>vale.rios@correo.cl</td><td>+56 9 5555 0008</td><td>Valparaíso</td><td>Valparaíso</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="pagination">
+          <button class="page">&laquo;</button>
+          <button class="page active">1</button>
+          <button class="page">2</button>
+          <button class="page">3</button>
+          <button class="page">&raquo;</button>
+        </div>
+      </section>
+
+      <!-- Modal nuevo usuario (simple, sin backend) -->
+      <dialog id="newUser">
+        <form method="dialog" class="modal">
+          <h3>Nuevo usuario</h3>
+          <div class="grid2">
+            <label>Nombre completo<input required></label>
+            <label>RUT<input required></label>
+            <label>Correo<input type="email" required></label>
+            <label>Teléfono<input required></label>
+            <label>Dirección<input></label>
+            <label>Comuna<input value="Valparaíso"></label>
+          </div>
+          <div class="modal-actions">
+            <button class="btn" value="confirm">Guardar</button>
+            <button class="btn ghost" value="cancel">Cancelar</button>
+          </div>
+        </form>
+      </dialog>
+    </main>
+  </div>
+
+  <script>
+    const dlg = document.getElementById('newUser');
+    document.getElementById('btn-new').addEventListener('click',()=>dlg.showModal());
+  </script>
+</body>
+</html>

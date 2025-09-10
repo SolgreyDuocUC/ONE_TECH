@@ -251,8 +251,27 @@ border-radius:8px;
 .review-item{ margin:6px 0; }
 
 
-.reviews.reviews-static .reviews-tab{ cursor: default; }
-.reviews.reviews-static .reviews-body{ display: none; }
+/* Footer consistente */
+#site-footer .footer-links { list-style: none; margin: 0; padding-left: 0; }
+#site-footer .footer-links li { margin: 6px 0; }
+#site-footer .link-muted { color: #d3d3d3; text-decoration: none; }
+#site-footer .link-muted:hover { color: #39ff14; }
+
+/* Cambia acentos azules a verde neón */
+.reviews-tab:hover{
+  border-color:#39ff14;
+  box-shadow:0 0 0 2px rgba(57,255,20,.18) inset;
+}
+.rating-number{ color:#39ff14; font-weight:700; }
+.btn.btn-primary:hover{ background:#55d040; color:#000; }
+
+#site-footer .footer-links{ list-style:none; margin:0; padding-left:0; }
+#site-footer .footer-links li{ margin:6px 0; }
+#site-footer .link-muted{ color:#d3d3d3; text-decoration:none; }
+#site-footer .link-muted:hover{ color:#39ff14; }
+#site-footer .text-accent,
+#site-footer h5,
+#site-footer h6{ color:#39ff14 !important; }
 
 
 @media (max-width: 900px){

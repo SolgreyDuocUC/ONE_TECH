@@ -1,61 +1,137 @@
 <!DOCTYPE html>
-<html lang="en">
-<head class="head_contact_us">
-  <link rel="stylesheet" href="styles.css/styles_contact_us.css">
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contacto | ONE TECH</title>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title class="titulo">Contact_us</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-      crossorigin="anonymous"
-    />
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+
+  <link rel="stylesheet" href="css/main.css" />
+
+
+  <link rel="stylesheet" href="styles.css/styles_contact_us.css">
 </head>
-<body class="formula_contact_us">
-    <header class="main-contact-us">
-        <div class="header-flex">
-            <h1>Onetech</h1>
-            <nav>
-                <a href="home">Home</a>
-                <a>|</a>
-                <a href="productos">Productos</a>
-                <a>|</a>
-                <a href="nosotros">Nosotros</a>
-                <a>|</a>
-                <a href="blogs">Blogs</a>
-                <a>|</a>
-                <a href="contacto">Contacto</a>
-            </nav>
-        </div>
-    </header>
-    <div>
-        <img src="" alt="logo titulo">
-        <h1 class="mb-4 text-center">OneTech</h1>
-        <form id="contactUs" class="border p-4 rounder shadow-sm formulario_contacto">
-            <div class="formulario-titulo">
-                FORMULARIO DE CONTACTO
-            </div>
-            <div class="row_mb-3">
-                <label for="nombre-completo" class="form-label">NOMBRE COMPLETO</label>
-                <input type="text" id="nombre-completo" class="form-control" required />
-            </div>
-            <div class="row_mb-3">
-                <label for="correo" class="form-label">CORREO</label>
-                <input type="text" id="correo" class="form-control" required />
-            </div>
-            <div class="row_mb-3">
-                <label for="contenido" class="form-label">CONTENIDO</label>
-                <input type="text" id="contenido" class="form-control" required />
-            </div>
-            <div class="button_confirmar">
-                <button type="button" class="btn btn-outline-light w-100 me-2">
-                    ENVIAR MENSAJE
-                </button>
-            </div>
-        </form>
+
+<body class="bg-black text-white formula_contact_us">
+
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-black shadow-sm py-3">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="/main.html">
+      <img src="tienda/One_tech.png" alt="Logo One Tech" width="55" height="55" class="mr-2 rounded">
+      <span class="h4 font-weight-bold mb-0 text-success">ONE TECH</span>
+    </a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent"
+      aria-controls="navbarContent" aria-expanded="false" aria-label="Mostrar menú">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarContent">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item"><a class="nav-link" href="/main.html">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="/productos.html">Productos</a></li>
+        <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="detalle_producto_contact_us_resenias_/contact_us.html">Contacto</a></li>
+      </ul>
+
+      <a href="cart.html" class="btn btn-success btn-sm rounded-pill mr-3 position-relative">
+        🛒 Carrito
+        <span id="cart-count" class="badge badge-light text-dark position-absolute" style="top:-8px; right:-10px; font-size:12px;">0</span>
+      </a>
+
+      <div class="d-none d-lg-block">
+        <a href="/login.html" class="text-success mx-2">Iniciar sesión</a>
+        <a href="/register.html" class="text-success mx-2">Registrarse</a>
+      </div>
     </div>
-    
+  </div>
+</nav>
+
+
+<main class="container my-4">
+  <h1 class="mb-4 text-center">OneTech</h1>
+
+  <form id="contactUs" class="border p-4 rounder shadow-sm formulario_contacto">
+    <div class="formulario-titulo">FORMULARIO DE CONTACTO</div>
+
+    <div class="row_mb-3">
+      <label for="nombre-completo" class="form-label">NOMBRE COMPLETO</label>
+      <input type="text" id="nombre-completo" class="form-control" placeholder="Tu nombre" required />
+    </div>
+
+    <div class="row_mb-3">
+      <label for="correo" class="form-label">CORREO</label>
+      <input type="email" id="correo" class="form-control" placeholder="tunombre@correo.com" required />
+    </div>
+
+    <div class="row_mb-3">
+      <label for="contenido" class="form-label">CONTENIDO</label>
+      <textarea id="contenido" class="form-control" rows="4" placeholder="Cuéntanos en qué te ayudamos" required></textarea>
+    </div>
+
+    <div class="button_confirmar">
+      <button type="submit" class="btn btn-accent w-100">ENVIAR MENSAJE</button>
+    </div>
+  </form>
+</main>
+
+<footer id="site-footer" class="container-fluid bg-black text-white-50 py-5 px-sm-3 px-lg-5 mt-5">
+  <div class="row pt-5">
+    <div class="col-lg-3 col-md-6 mb-4">
+      <a href="/main.html" class="navbar-brand">
+        <h1 class="m-0"><span class="text-white">ONE</span><span class="text-accent">TECH</span></h1>
+      </a>
+      <p><strong>Misión:</strong> Entregar productos gamer de alta calidad en todo Chile, garantizando una experiencia personalizada, rápida y confiable.</p>
+      <p><strong>Visión:</strong> Ser la tienda online gamer líder en Chile, destacando por innovación, fidelización y atención al cliente excepcional.</p>
+    </div>
+
+    <div class="col-lg-3 col-md-6 mb-4">
+      <h5 class="text-white text-uppercase mb-4" style="letter-spacing:2px;">Nuestros Servicios</h5>
+      <ul class="footer-links">
+        <li><a class="link-muted" href="#">Proveedores</a></li>
+        <li><a class="link-muted" href="#">Ubicación de bodega</a></li>
+        <li><a class="link-muted" href="#">Armado de PC</a></li>
+        <li><a class="link-muted" href="#">Promociones</a></li>
+        <li><a class="link-muted" href="#">Testimonios</a></li>
+        <li><a class="link-muted" href="#">Blog</a></li>
+      </ul>
+    </div>
+
+    <div class="col-lg-3 col-md-6 mb-4">
+      <h5 class="text-white text-uppercase mb-4" style="letter-spacing:2px;">Contáctanos</h5>
+      <p>Antonio Varas 303, Of. 606, Providencia, RM</p>
+      <p>+56 9 3190 8354</p>
+      <p>onetech.chile@central.cl</p>
+
+      <h6 class="text-white text-uppercase mt-4 mb-3" style="letter-spacing:2px;">Suscríbete</h6>
+      <div class="input-group">
+        <input type="email" class="form-control border-0" placeholder="Tu correo electrónico">
+        <div class="input-group-append">
+          <button class="btn btn-accent">Enviar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row border-top pt-4 mt-4" style="border-color:rgba(255,255,255,0.1)!important;">
+    <div class="col-md-6 text-center text-md-left mb-2 mb-md-0">
+      <p class="m-0 text-white-50">&copy; 2025 ONE TECH. Todos los derechos reservados.</p>
+    </div>
+    <div class="col-md-6 text-center text-md-right">
+      <p class="m-0 text-white-50">Desarrollado por <strong>Centro de Innovación DUOC UC</strong></p>
+    </div>
+  </div>
+</footer>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
