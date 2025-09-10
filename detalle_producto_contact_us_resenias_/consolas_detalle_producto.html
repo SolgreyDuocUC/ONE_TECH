@@ -5,19 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Consolas — Detalle Producto | ONE TECH</title>
 
-
+  <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
-
+  <!-- CSS personalizado -->
   <link rel="stylesheet" href="css/main.css" />
-
-
   <link rel="stylesheet" href="styles.css/styles_consolas_detalle_producto.css">
 </head>
 
 <body class="bg-black text-white">
 
-
+<!-- =======================
+     Navbar principal
+======================= -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-black shadow-sm py-3">
   <div class="container">
     <a class="navbar-brand d-flex align-items-center" href="/main.html">
@@ -39,6 +39,7 @@
         <li class="nav-item"><a class="nav-link" href="detalle_producto_contact_us_resenias_/contact_us.html">Contacto</a></li>
       </ul>
 
+      <!-- Botón de carrito con contador -->
       <a href="cart.html" class="btn btn-success btn-sm rounded-pill mr-3 position-relative">
         🛒 Carrito
         <span id="cart-count" class="badge badge-light text-dark position-absolute" style="top:-8px; right:-10px; font-size:12px;">0</span>
@@ -52,47 +53,54 @@
   </div>
 </nav>
 
+<!-- =======================
+     Detalle de producto
+======================= -->
+<div id="consola-details" class="border p-4 rounded shadow-sm">
 
-<div id="consola-details" class="border p-4 rounder shadow-sm">
+  <!-- Breadcrumb -->
   <div class="breadcrumb_5">
     <header>
       <nav>
-        <a href="/main.html">Home</a>
-        <a>></a>
-        <a href="/productos.html">Consolas</a>
-        <a>></a>
+        <a href="/main.html">Home</a> &gt;
+        <a href="/productos.html">Consolas</a> &gt;
         <a>PlayStation 5</a>
       </nav>
     </header>
   </div>
 
-  <div class="detalle-producto">
-    <div class="product-images">
+  <div class="detalle-producto d-flex flex-wrap">
+
+    <!-- Imagen principal y miniaturas -->
+    <div class="product-images mr-4">
       <img id="main-image" src="/detalle_producto_contact_us_resenias_/productos/ps5_1.png" alt="Imagen principal PlayStation 5">
-      <div class="thumbnails">
+      <div class="thumbnails mt-2">
         <img src="/detalle_producto_contact_us_resenias_/productos/ps5_1.png" alt="Miniatura 1" onclick="showImage('/detalle_producto_contact_us_resenias_/productos/ps5_1.png')">
         <img src="/detalle_producto_contact_us_resenias_/productos/ps5_4.png" alt="Miniatura 2" onclick="showImage('/detalle_producto_contact_us_resenias_/productos/ps5_4.png')">
         <img src="/detalle_producto_contact_us_resenias_/productos/ps5_5_png.jpg" alt="Miniatura 3" onclick="showImage('/detalle_producto_contact_us_resenias_/productos/ps5_5_png.jpg')">
       </div>
     </div>
 
-    <div class="product-info">
-      <h3>PlayStation 5 $549.990 CLP</h3>
-      <p>
-        La consola de última generación de Sony, que ofrece gráficos impresionantes y tiempos
-        de carga ultrarrápidos para una experiencia de juego inmersiva.
-      </p>
+    <!-- Información del producto -->
+    <div class="product-info flex-fill">
 
-      <form action="seleccionar_producto">
+      <h3>PlayStation 5 — $549.990 CLP</h3>
+      <p>La consola de última generación de Sony, que ofrece gráficos impresionantes y tiempos
+         de carga ultrarrápidos para una experiencia de juego inmersiva.</p>
+
+      <!-- Formulario de agregar al carrito -->
+      <form id="form-producto">
         <label for="cantidad_product_ps5">Cantidad:</label>
         <select name="cantidad_productos" id="cantidad_product_ps5">
+          <!-- Opciones de 1 a 10 -->
           <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
           <option>6</option><option>7</option><option>8</option><option>9</option><option>10</option>
         </select>
         <button type="submit" class="btn btn-primary">Añadir al carrito</button>
       </form>
 
-      <details class="reviews">
+      <!-- Reseñas -->
+      <details class="reviews mt-3">
         <summary class="reviews-tab">
           <span class="stars" aria-label="Valoración 4.5 de 5">
             <span class="star full"></span><span class="star full"></span><span class="star full"></span>
@@ -102,17 +110,19 @@
           <span class="reviews-count">(24 reseñas)</span>
         </summary>
 
-        <div class="reviews-body">
+        <div class="reviews-body mt-2">
           <div class="review-item"><strong>María</strong> — “Excelente calidad, se siente sólido.”</div>
           <div class="review-item"><strong>Juan</strong> — “Llegó rápido, funciona perfecto con mi setup.”</div>
           <div><nav><a href="resenia.html">¿Quieres dejar tu reseña? Aprieta aquí</a></nav></div>
         </div>
       </details>
+
     </div>
   </div>
 
-  <p class="related-products-text">Related Products</p>
-  <div class="related-products">
+  <!-- Productos relacionados -->
+  <p class="related-products-text mt-4">Productos relacionados</p>
+  <div class="related-products d-flex flex-wrap">
     <div class="related-item"><img src="/img/productos/catan.png" alt="Catan"><div class="related-desc">Catan</div></div>
     <div class="related-item"><img src="/detalle_producto_contact_us_resenias_/productos/ps5_4.png" alt="Consola Retro"><div class="related-desc">Consola PlayStation 5</div></div>
     <div class="related-item"><img src="/detalle_producto_contact_us_resenias_/productos/SG001 Sillas Gamers Silla Gamer Secretlab Titan.webp" alt="Silla Gamer"><div class="related-desc">Silla Gamer</div></div>
@@ -121,15 +131,17 @@
   </div>
 </div>
 
-
+<!-- =======================
+     Footer
+======================= -->
 <footer id="site-footer" class="container-fluid bg-black text-white-50 py-5 px-sm-3 px-lg-5 mt-5">
   <div class="row pt-5">
     <div class="col-lg-3 col-md-6 mb-4">
       <a href="/main.html" class="navbar-brand">
         <h1 class="m-0"><span class="text-white">ONE</span><span class="text-accent">TECH</span></h1>
       </a>
-      <p><strong>Misión:</strong> Entregar productos gamer de alta calidad en todo Chile, garantizando una experiencia personalizada, rápida y confiable.</p>
-      <p><strong>Visión:</strong> Ser la tienda online gamer líder en Chile, destacando por innovación, fidelización y atención al cliente excepcional.</p>
+      <p><strong>Misión:</strong> Entregar productos gamer de alta calidad en todo Chile.</p>
+      <p><strong>Visión:</strong> Ser la tienda online gamer líder en Chile, destacando por innovación y atención al cliente excepcional.</p>
     </div>
 
     <div class="col-lg-3 col-md-6 mb-4">
@@ -170,12 +182,22 @@
   </div>
 </footer>
 
-
+<!-- =======================
+     Scripts JS
+======================= -->
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="js/main.js"></script>
+
+<!-- Función para cambiar imagen principal -->
 <script>
-function showImage(src){ document.getElementById('main-image').src = src; }
+function showImage(src){ 
+    document.getElementById('main-image').src = src; 
+}
 </script>
+
+<!-- Script del carrito -->
+<script src="js/carrito.js"></script>
+
 </body>
 </html>
