@@ -1,0 +1,93 @@
+/* ===== Theme ===== */
+:root{
+  --bg:#f6f8f9; --panel:#ffffff; --line:#e6ebef; --text:#111827; --muted:#6b7280;
+  --accent:#72f0b0; --accent-ink:#0b3b25; --radius:14px; --shadow:0 2px 14px rgba(16,24,40,.06);
+}
+
+/* ===== Base / Layout ===== */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif; color:var(--text);
+  background:
+    radial-gradient(16px 16px at 24px 24px, rgba(114,240,176,.08) 20%, transparent 21%) repeat,
+    linear-gradient(180deg, #f7fafb, #f3f7f8);
+  background-size:120px 120px, 100% 100%;
+}
+.app{ display:grid; grid-template-columns:260px 1fr; min-height:100dvh; }
+
+/* ===== Sidebar ===== */
+.sidebar{
+  border-right:1px solid var(--line);
+  background:linear-gradient(180deg,#fff,#f7fbf9);
+  padding:18px 16px; display:flex; flex-direction:column; gap:24px;
+}
+.brand{ font-weight:800; letter-spacing:.3px; }
+.brand span{ color:var(--accent-ink); background:var(--accent); padding:2px 6px; border-radius:999px; margin-left:6px; }
+.menu{ display:grid; gap:8px; }
+.menu a{ display:flex; align-items:center; gap:10px; padding:10px 12px; border-radius:10px; text-decoration:none; color:#111827; border:1px solid transparent; }
+.menu a:hover{ background:#f3fbf7; border-color:#e6f8ef; }
+.menu a.active{ background:linear-gradient(180deg,#ecfff6,#dafbea); border-color:#b9f3d4; color:#0f5132; font-weight:700; }
+.sidebar-footer{ margin-top:auto; }
+.logout{ display:inline-block; text-decoration:none; font-weight:700; color:#0f5132; background:var(--accent); padding:10px 12px; border-radius:10px; }
+
+/* ===== Content / Topbar ===== */
+.content{ padding:20px 22px; }
+.topbar{ display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:14px; }
+.topbar h1{ margin:0; font-size:1.45rem; }
+.btn{
+  appearance:none; border:none; cursor:pointer; font-weight:700;
+  color:#0f5132; background:var(--accent);
+  padding:10px 12px; border-radius:10px; box-shadow:var(--shadow);
+}
+
+/* ===== Panel + Table ===== */
+.panel{
+  background:var(--panel); border:1px solid var(--line);
+  border-radius:var(--radius); box-shadow:var(--shadow); padding:12px;
+}
+.table-wrap{ overflow:auto; border-radius:12px; }
+.table{ width:100%; border-collapse:collapse; min-width:840px; }
+.table thead th{
+  text-align:left; font-weight:700; color:#374151;
+  background:linear-gradient(180deg,#ecfff6,#dafbea);
+  border-bottom:1px solid #cfeee0; padding:12px; position:sticky; top:0; z-index:1;
+}
+.table tbody td{
+  padding:12px; border-bottom:1px solid var(--line); color:#111827;
+}
+.table tbody tr:nth-child(even){ background:#fafcfd; }
+.table tbody tr:hover{ background:#f2fbf7; }
+
+/* ===== Pagination ===== */
+.pagination{ display:flex; gap:8px; justify-content:center; padding:12px 0 4px; }
+.page{
+  border:1px solid var(--line); background:#fff; border-radius:8px; padding:6px 10px; cursor:pointer;
+}
+.page:hover{ background:#ecfff6; border-color:#b9f3d4; }
+.page.active{ background:var(--accent); color:#0f5132; font-weight:800; }
+
+/* ===== Dialog (Nuevo usuario) ===== */
+dialog{ border:none; padding:0; border-radius:16px; box-shadow:0 20px 40px rgba(2,8,20,.18); }
+dialog::backdrop{ background:rgba(17,24,39,.35); }
+.modal{
+  display:grid; gap:12px; background:var(--panel);
+  border:1px solid var(--line); border-radius:16px; padding:18px;
+  min-width:520px;
+}
+.modal h3{ margin:0; }
+.grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+label{ display:grid; gap:6px; color:#374151; font-size:.95rem; }
+input,select{
+  padding:10px 12px; border:1px solid var(--line); border-radius:10px; background:#fff; color:var(--text);
+}
+input:focus,select:focus{ outline:2px solid rgba(114,240,176,.55); border-color:#b9f3d4; }
+.modal-actions{ display:flex; gap:10px; justify-content:flex-end; }
+.btn.ghost{ background:#ecfff6; color:#0f5132; border:1px solid #b9f3d4; box-shadow:none; }
+
+@media (max-width:720px){
+  .app{ grid-template-columns:1fr; }
+  .sidebar{ position:sticky; top:0; z-index:5; }
+  .grid2{ grid-template-columns:1fr; }
+  .modal{ min-width:min(96vw,520px); }
+}

@@ -105,3 +105,33 @@ button:hover, input[type="submit"]:hover {
 .header-flex a {
     margin: 0 8px;
 }
+
+.reviews.reviews-static .reviews-tab{ cursor: default; }
+.reviews.reviews-static .reviews-body{ display: none; }
+/* ===== ONE TECH Overrides (contact) ===== */
+a:hover { color:#39ff14; }
+
+input, textarea {
+  background-color:#000;
+  color:#fff;
+  border:1px solid #39ff14;
+  border-radius:6px;
+}
+input:focus, textarea:focus {
+  border-color:#39ff14;
+  box-shadow:0 0 0 2px rgba(57,255,20,.18);
+}
+
+.button_confirmar { background:transparent; margin-top:30px; }
+.btn.btn-accent { background:#39ff14; color:#000; border:none; }
+.btn.btn-accent:hover { filter:brightness(0.9); }
+
+/* Footer como en el resto */
+#site-footer .footer-links{ list-style:none; margin:0; padding-left:0; }
+#site-footer .footer-links li{ margin:6px 0; }
+#site-footer .link-muted{ color:#d3d3d3; text-decoration:none; }
+#site-footer .link-muted:hover{ color:#39ff14; }
+#site-footer .text-accent,
+#site-footer h5,
+#site-footer h6{ color:#39ff14 !important; }
+

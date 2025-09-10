@@ -1,0 +1,182 @@
+:root{
+  --bg:#f6f8f9;                /* base clara pero no blanca pura */
+  --panel:#ffffff;
+  --line:#e6ebef;
+  --text:#111827;
+  --muted:#6b7280;
+  --accent:#72f0b0;            /* verde leve */
+  --accent-ink:#0b3b25;
+  --radius:14px;
+  --shadow:0 2px 14px rgba(16,24,40,.06);
+}
+
+/* Layout base */
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;
+  color:var(--text);
+  background:
+    radial-gradient(16px 16px at 24px 24px, rgba(114,240,176,.08) 20%, transparent 20%) repeat,
+    linear-gradient(180deg, #f7fafb, #f3f7f8);
+  background-size:120px 120px, 100% 100%;
+}
+.app{ display:grid; grid-template-columns: 260px 1fr; min-height:100dvh; }
+
+/* Sidebar */
+.sidebar{
+  border-right:1px solid var(--line);
+  background:linear-gradient(180deg,#fff, #f7fbf9);
+  padding:18px 16px;
+  display:flex; flex-direction:column; gap:24px;
+}
+.brand{ font-weight:800; letter-spacing:.3px; }
+.brand span{ color:var(--accent-ink); background:var(--accent); padding:2px 6px; border-radius:999px; margin-left:6px; }
+
+.menu{ display:grid; gap:8px; }
+.menu a{
+  display:flex; align-items:center; gap:10px;
+  padding:10px 12px; border-radius:10px; text-decoration:none;
+  color:#111827; border:1px solid transparent;
+}
+.menu a:hover{ background:#f3fbf7; border-color:#e6f8ef; }
+.menu a.active{
+  background:linear-gradient(180deg,#ecfff6,#dafbea);
+  border-color:#b9f3d4; color:#0f5132; font-weight:700;
+}
+
+.sidebar-footer{ margin-top:auto; }
+.logout{
+  display:inline-block; text-decoration:none; font-weight:700;
+  color:#0f5132; background:var(--accent); padding:10px 12px; border-radius:10px;
+}
+
+/* Content */
+.content{ padding:20px 22px; }
+.topbar{
+  display:flex; align-items:center; justify-content:space-between; margin-bottom:14px;
+}
+.btn.ghost{
+  padding:10px 12px; border-radius:10px; text-decoration:none;
+  color:#0f5132; border:1px solid #b9f3d4; background:#ecfff6;
+}
+
+/* KPIs */
+.kpis{
+  display:grid; grid-template-columns: repeat(4, minmax(160px,1fr));
+  gap:14px; margin-bottom:14px;
+}
+.kpi{
+  all:unset; cursor:pointer; background:var(--panel); border:1px solid var(--line);
+  border-radius:var(--radius); box-shadow:var(--shadow);
+  padding:14px; display:grid; gap:6px;
+}
+.kpi .kpi-label{ color:var(--muted); font-size:.9rem; }
+.kpi .kpi-value{ font-size:1.4rem; font-weight:800; color:var(--text); }
+.kpi.active{ outline:3px solid rgba(114,240,176,.35); }
+
+/* Widgets */
+.widgets{
+  display:grid; grid-template-columns: repeat(4, minmax(160px,1fr));
+  gap:14px; margin-bottom:16px;
+}
+.widget{
+  background:var(--panel); border:1px solid var(--line);
+  border-radius:var(--radius); box-shadow:var(--shadow);
+  padding:12px;
+}
+.widget h4{ margin:0 0 6px; font-size:.95rem; color:#374151; }
+
+/* Paneles */
+.charts{ display:grid; grid-template-columns:1fr; gap:14px; }
+.chart-panel{
+  display:none; background:var(--panel); border:1px solid var(--line);
+  border-radius:var(--radius); box-shadow:var(--shadow); padding:16px;
+}
+.chart-panel.active{ display:block; }
+.chart-panel h3{ margin:0 0 10px; }
+
+/* ====== Mini-charts: CSS puro ====== */
+.mini-chart{ position:relative; height:180px; background:
+  linear-gradient(180deg, #fff, #fbfdfc);
+  border:1px dashed #e9f5ee; border-radius:12px; overflow:hidden; padding:8px;
+}
+.mini-chart.sm{ height:110px; }
+
+/* Barras */
+.mini-chart.bars i{
+  --h:50%;
+  position:absolute; bottom:8px; width:12%; 
+  left: calc(8% + (var(--i,0) * 18%));
+  height:var(--h); border-radius:8px 8px 2px 2px;
+  background:linear-gradient(180deg, var(--accent), #c7f7df);
+  box-shadow:0 2px 8px rgba(114,240,176,.35);
+}
+.mini-chart.bars i:nth-child(1){ --i:0 }
+.mini-chart.bars i:nth-child(2){ --i:1 }
+.mini-chart.bars i:nth-child(3){ --i:2 }
+.mini-chart.bars i:nth-child(4){ --i:3 }
+.mini-chart.bars i:nth-child(5){ --i:4 }
+
+/* Línea */
+.mini-chart.line i,
+.mini-chart.area i{
+  position:absolute; inset:0; --p1:70%;--p2:60%;--p3:50%;--p4:40%;--p5:30%;
+  background:
+    radial-gradient(5px 5px at 12% var(--p1), var(--accent) 98%, transparent 100%),
+    radial-gradient(5px 5px at 30% var(--p2), var(--accent) 98%, transparent 100%),
+    radial-gradient(5px 5px at 50% var(--p3), var(--accent) 98%, transparent 100%),
+    radial-gradient(5px 5px at 70% var(--p4), var(--accent) 98%, transparent 100%),
+    radial-gradient(5px 5px at 88% var(--p5), var(--accent) 98%, transparent 100%),
+    linear-gradient( transparent calc(var(--p1) + 1px), var(--accent) calc(var(--p1) + 1px)) 12% 0/2px 100% no-repeat,
+    linear-gradient( transparent calc(var(--p2) + 1px), var(--accent) calc(var(--p2) + 1px)) 30% 0/2px 100% no-repeat,
+    linear-gradient( transparent calc(var(--p3) + 1px), var(--accent) calc(var(--p3) + 1px)) 50% 0/2px 100% no-repeat,
+    linear-gradient( transparent calc(var(--p4) + 1px), var(--accent) calc(var(--p4) + 1px)) 70% 0/2px 100% no-repeat,
+    linear-gradient( transparent calc(var(--p5) + 1px), var(--accent) calc(var(--p5) + 1px)) 88% 0/2px 100% no-repeat;
+}
+
+/* Área (relleno bajo la línea) */
+.mini-chart.area i::after{
+  content:""; position:absolute; inset:0;
+  --p1:70%;--p2:60%;--p3:50%;--p4:40%;--p5:30%;
+  background:
+    linear-gradient(180deg, rgba(114,240,176,.45), rgba(114,240,176,0)) 0 0/100% 100%;
+  -webkit-mask:
+    radial-gradient(5px 5px at 12% var(--p1), #000 98%, transparent 100%),
+    radial-gradient(5px 5px at 30% var(--p2), #000 98%, transparent 100%),
+    radial-gradient(5px 5px at 50% var(--p3), #000 98%, transparent 100%),
+    radial-gradient(5px 5px at 70% var(--p4), #000 98%, transparent 100%),
+    radial-gradient(5px 5px at 88% var(--p5), #000 98%, transparent 100%),
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: destination-over;
+          mask-composite: exclude;
+}
+
+/* Barras apiladas (dos segmentos por barra) */
+.mini-chart.stacked i{
+  position:absolute; bottom:8px; width:12%;
+  left: calc(8% + (var(--i,0) * 18%));
+  height:calc(var(--a) + var(--b)); border-radius:8px;
+  background:transparent;
+  display:flex; flex-direction:column-reverse; overflow:hidden;
+  box-shadow:0 2px 8px rgba(114,240,176,.2);
+}
+.mini-chart.stacked i::before,
+.mini-chart.stacked i::after{
+  content:""; display:block; width:100%;
+}
+.mini-chart.stacked i::before{ height:var(--a); background:linear-gradient(180deg,#a9f5d1,#74eeb1);}
+.mini-chart.stacked i::after{ height:var(--b); background:#d7fbea;}
+.mini-chart.stacked i:nth-child(1){ --i:0 }
+.mini-chart.stacked i:nth-child(2){ --i:1 }
+.mini-chart.stacked i:nth-child(3){ --i:2 }
+.mini-chart.stacked i:nth-child(4){ --i:3 }
+
+/* Responsivo */
+@media (max-width: 1080px){
+  .kpis,.widgets{ grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 720px){
+  .app{ grid-template-columns: 1fr; }
+  .sidebar{ position:sticky; top:0; z-index:5; }
+}

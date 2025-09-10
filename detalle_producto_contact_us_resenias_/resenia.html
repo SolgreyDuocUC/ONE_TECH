@@ -5,144 +5,202 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Onetech — Reseñas</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/main.css" />
+
+
   <link rel="stylesheet" href="styles.css/styles_reviews.css">
 </head>
-<body>
-  <header class="main-header">
-    <div class="header-flex">
-      <h1>Onetech</h1>
-      <nav>
-        <a href="home">Home</a><a>|</a>
-        <a href="productos">Productos</a><a>|</a>
-        <a href="nosotros">Nosotros</a><a>|</a>
-        <a href="blogs">Blogs</a><a>|</a>
-        <a href="contact_us.html">Contacto</a>
-        <a href="cart.html">Cart(4)</a>
-      </nav>
+<body class="bg-black text-white">
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-black shadow-sm py-3">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="/main.html">
+      <img src="tienda/One_tech.png" alt="Logo One Tech" width="55" height="55" class="mr-2 rounded">
+      <span class="h4 font-weight-bold mb-0 text-success">ONE TECH</span>
+    </a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent"
+      aria-controls="navbarContent" aria-expanded="false" aria-label="Mostrar menú">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarContent">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item"><a class="nav-link" href="/main.html">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="/productos.html">Productos</a></li>
+        <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="detalle_producto_contact_us_resenias_/contact_us.html">Contacto</a></li>
+      </ul>
+
+      <a href="cart.html" class="btn btn-success btn-sm rounded-pill mr-3 position-relative">
+        🛒 Carrito
+        <span id="cart-count" class="badge badge-light text-dark position-absolute" style="top:-8px; right:-10px; font-size:12px;">0</span>
+      </a>
+
+      <div class="d-none d-lg-block">
+        <a href="/login.html" class="text-success mx-2">Iniciar sesión</a>
+        <a href="/register.html" class="text-success mx-2">Registrarse</a>
+      </div>
     </div>
-  </header>
+  </div>
+</nav>
 
-  <main id="reviews-page">
 
-    <section class="summary">
-      <h2>Reseñas</h2>
-            <p class="subheading">
-        Para: <span class="pill product">Controlador Inalámbrico Xbox Series X</span>
-        <span class="sep">•</span>
-        <span class="category">
-          <a href="productos">Accesorios</a> / <a href="controladores">Controladores</a>
+<main id="reviews-page" class="container-fluid">
+  <section class="summary">
+    <h2>Reseñas</h2>
+    <p class="subheading">
+      Para: <span class="pill product">Controlador Inalámbrico Xbox Series X</span>
+      <span class="sep">•</span>
+      <span class="category">
+        <a href="/productos">Accesorios</a> / <a href="/detalle_producto_contact_us_resenias_/accesorios_controlador_detalle_producto.html">Controladores</a>
+      </span>
+    </p>
+
+    <div class="score">
+      <span class="stars" aria-label="Valoración 4.5 de 5">
+        <span class="star full"></span><span class="star full"></span>
+        <span class="star full"></span><span class="star full"></span>
+        <span class="star half"></span>
+      </span>
+      <span class="rating-number">4.5</span>
+      <span class="count">(24 reseñas)</span>
+    </div>
+  </section>
+
+  <section class="toolbar">
+    <label for="orden">Ordenar por:</label>
+    <select id="orden">
+      <option>Más recientes</option>
+      <option>Mejor valoradas</option>
+      <option>Peor valoradas</option>
+    </select>
+  </section>
+
+  <section class="review-list">
+    <article class="review">
+      <header class="review-top"><strong>María P.</strong><span class="date">12/08/2025</span></header>
+      <div class="review-stars">
+        <span class="stars">
+          <span class="star full"></span><span class="star full"></span>
+          <span class="star full"></span><span class="star full"></span>
+          <span class="star empty"></span>
         </span>
-      </p>
+        <span class="rating-number">4.0</span>
+      </div>
+      <p>Excelente calidad, se siente sólido. La batería dura bastante y el agarre es cómodo.</p>
+    </article>
 
-      <div class="score">
-        <span class="stars" aria-label="Valoración 4.5 de 5">
-          <span class="star full"></span>
-          <span class="star full"></span>
-          <span class="star full"></span>
-          <span class="star full"></span>
+    <article class="review">
+      <header class="review-top"><strong>Juan S.</strong><span class="date">08/08/2025</span></header>
+      <div class="review-stars">
+        <span class="stars">
+          <span class="star full"></span><span class="star full"></span>
+          <span class="star full"></span><span class="star full"></span>
           <span class="star half"></span>
         </span>
         <span class="rating-number">4.5</span>
-        <span class="count">(24 reseñas)</span>
       </div>
-    </section>
+      <p>Llegó rápido, funciona perfecto. El cable podría ser un poco más largo.</p>
+    </article>
 
+    <article class="review">
+      <header class="review-top"><strong>Camila R.</strong><span class="date">30/07/2025</span></header>
+      <div class="review-stars">
+        <span class="stars">
+          <span class="star full"></span><span class="star full"></span>
+          <span class="star full"></span><span class="star empty"></span>
+          <span class="star empty"></span>
+        </span>
+        <span class="rating-number">3.0</span>
+      </div>
+      <p>Buen producto por el precio, aunque el software es medio básico.</p>
+    </article>
+  </section>
 
-    <section class="toolbar">
-      <label for="orden">Ordenar por:</label>
-      <select id="orden">
-        <option>Más recientes</option>
-        <option>Mejor valoradas</option>
-        <option>Peor valoradas</option>
-      </select>
-    </section>
+  <section class="write">
+    <h3>Escribe tu reseña</h3>
+    <form>
+      <div class="row">
+        <label for="name">Tu nombre</label>
+        <input id="name" type="text" placeholder="Ej: Ana G." />
+      </div>
 
-
-    <section class="review-list">
-      <article class="review">
-        <header class="review-top">
-          <strong>María P.</strong>
-          <span class="date">12/08/2025</span>
-        </header>
-        <div class="review-stars">
-          <span class="stars">
-            <span class="star full"></span><span class="star full"></span>
-            <span class="star full"></span><span class="star full"></span>
-            <span class="star empty"></span>
-          </span>
-          <span class="rating-number">4.0</span>
+      <div class="row">
+        <label>Tu valoración</label>
+        <div class="rating-input" role="radiogroup" aria-label="Selecciona una valoración">
+          <input type="radio" id="r5" name="rating" value="5"><label for="r5" title="5 estrellas">★</label>
+          <input type="radio" id="r4" name="rating" value="4"><label for="r4" title="4 estrellas">★</label>
+          <input type="radio" id="r3" name="rating" value="3"><label for="r3" title="3 estrellas">★</label>
+          <input type="radio" id="r2" name="rating" value="2"><label for="r2" title="2 estrellas">★</label>
+          <input type="radio" id="r1" name="rating" value="1"><label for="r1" title="1 estrella">★</label>
         </div>
-        <p>Excelente calidad, se siente sólido. La batería dura bastante y el agarre es cómodo.</p>
-      </article>
+      </div>
 
-      <article class="review">
-        <header class="review-top">
-          <strong>Juan S.</strong>
-          <span class="date">08/08/2025</span>
-        </header>
-        <div class="review-stars">
-          <span class="stars">
-            <span class="star full"></span><span class="star full"></span>
-            <span class="star full"></span><span class="star full"></span>
-            <span class="star half"></span>
-          </span>
-          <span class="rating-number">4.5</span>
+      <div class="row">
+        <label for="msg">Comentario</label>
+        <textarea id="msg" rows="4" placeholder="Cuéntanos tu experiencia..."></textarea>
+      </div>
+
+      <button class="btn btn-primary" type="submit">Enviar reseña</button>
+    </form>
+  </section>
+</main>
+
+<footer id="site-footer" class="container-fluid bg-black text-white-50 py-5 px-sm-3 px-lg-5 mt-5">
+  <div class="row pt-5">
+    <div class="col-lg-3 col-md-6 mb-4">
+      <a href="/main.html" class="navbar-brand">
+        <h1 class="m-0"><span class="text-white">ONE</span><span class="text-accent">TECH</span></h1>
+      </a>
+      <p><strong>Misión:</strong> Entregar productos gamer de alta calidad en todo Chile, garantizando una experiencia personalizada, rápida y confiable.</p>
+      <p><strong>Visión:</strong> Ser la tienda online gamer líder en Chile, destacando por innovación, fidelización y atención al cliente excepcional.</p>
+    </div>
+
+    <div class="col-lg-3 col-md-6 mb-4">
+      <h5 class="text-white text-uppercase mb-4" style="letter-spacing:2px;">Nuestros Servicios</h5>
+      <ul class="footer-links">
+        <li><a class="link-muted" href="#">Proveedores</a></li>
+        <li><a class="link-muted" href="#">Ubicación de bodega</a></li>
+        <li><a class="link-muted" href="#">Armado de PC</a></li>
+        <li><a class="link-muted" href="#">Promociones</a></li>
+        <li><a class="link-muted" href="#">Testimonios</a></li>
+        <li><a class="link-muted" href="#">Blog</a></li>
+      </ul>
+    </div>
+
+    <div class="col-lg-3 col-md-6 mb-4">
+      <h5 class="text-white text-uppercase mb-4" style="letter-spacing:2px;">Contáctanos</h5>
+      <p>Antonio Varas 303, Of. 606, Providencia, RM</p>
+      <p>+56 9 3190 8354</p>
+      <p>onetech.chile@central.cl</p>
+
+      <h6 class="text-white text-uppercase mt-4 mb-3" style="letter-spacing:2px;">Suscríbete</h6>
+      <div class="input-group">
+        <input type="email" class="form-control border-0" placeholder="Tu correo electrónico">
+        <div class="input-group-append">
+          <button class="btn btn-accent">Enviar</button>
         </div>
-        <p>Llegó rápido, funciona perfecto. El cable podría ser un poco más largo.</p>
-      </article>
+      </div>
+    </div>
+  </div>
 
-      <article class="review">
-        <header class="review-top">
-          <strong>Camila R.</strong>
-          <span class="date">30/07/2025</span>
-        </header>
-        <div class="review-stars">
-          <span class="stars">
-            <span class="star full"></span><span class="star full"></span>
-            <span class="star full"></span><span class="star empty"></span>
-            <span class="star empty"></span>
-          </span>
-          <span class="rating-number">3.0</span>
-        </div>
-        <p>Buen producto por el precio, aunque el software es medio básico.</p>
-      </article>
-    </section>
+  <div class="row border-top pt-4 mt-4" style="border-color:rgba(255,255,255,0.1)!important;">
+    <div class="col-md-6 text-center text-md-left mb-2 mb-md-0">
+      <p class="m-0 text-white-50">&copy; 2025 ONE TECH. Todos los derechos reservados.</p>
+    </div>
+    <div class="col-md-6 text-center text-md-right">
+      <p class="m-0 text-white-50">Desarrollado por <strong>Centro de Innovación DUOC UC</strong></p>
+    </div>
+  </div>
+</footer>
 
-    <section class="write">
-      <h3>Escribe tu reseña</h3>
-      <form>
-        <div class="row">
-          <label for="name">Tu nombre</label>
-          <input id="name" type="text" placeholder="Ej: Ana G." />
-        </div>
-
-        <div class="row">
-          <label>Tu valoración</label>
-          <div class="rating-input" role="radiogroup" aria-label="Selecciona una valoración">
-            <input type="radio" id="r5" name="rating" value="5">
-            <label for="r5" title="5 estrellas">★</label>
-            <input type="radio" id="r4" name="rating" value="4">
-            <label for="r4" title="4 estrellas">★</label>
-            <input type="radio" id="r3" name="rating" value="3">
-            <label for="r3" title="3 estrellas">★</label>
-            <input type="radio" id="r2" name="rating" value="2">
-            <label for="r2" title="2 estrellas">★</label>
-            <input type="radio" id="r1" name="rating" value="1">
-            <label for="r1" title="1 estrella">★</label>
-          </div>
-        </div>
-
-        <div class="row">
-          <label for="msg">Comentario</label>
-          <textarea id="msg" rows="4" placeholder="Cuéntanos tu experiencia..."></textarea>
-        </div>
-
-        <button class="btn btn-primary" type="submit">Enviar reseña</button>
-      </form>
-    </section>
-  </main>
-
-  <footer class="site-footer">© 2025 Onetech</footer>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>

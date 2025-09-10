@@ -83,6 +83,29 @@ display:flex; flex-direction:column; gap:24px;
     text-decoration:none; 
     font-weight:700; 
 }
+.breadcrumb{
+  background-color: transparent !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  margin: 0 0 16px 0 !important;
+  box-shadow: none !important;
+}
+
+
+.breadcrumb a{ 
+  color:#39ff14 !important; 
+  text-decoration: underline; 
+}
+.breadcrumb a:last-child{
+  color:#fff !important; 
+  text-decoration: none; 
+  font-weight:700;
+}
+
+
+.breadcrumb-item + .breadcrumb-item::before{
+  color:#39ff14 !important;
+}
 
 
 .detalle-producto{
@@ -273,6 +296,19 @@ border-radius:8px;
 .reviews.reviews-static .reviews-body{ display: none; }
 
 
+/* --- Overrides ONE TECH (Mouse) --- */
+.thumbnails img:hover{ border-color:#39ff14; }
+.btn.btn-primary:hover{ background:#39ff14; color:#000; }
+.rating-number{ color:#39ff14; }
+.reviews-tab:hover{ border-color:#39ff14; box-shadow:0 0 0 2px rgba(57,255,20,.18) inset; }
+
+/* Footer igual al resto */
+#site-footer .footer-links{ list-style:none; margin:0; padding-left:0; }
+#site-footer .footer-links li{ margin:6px 0; }
+#site-footer .link-muted{ color:#d3d3d3; text-decoration:none; }
+#site-footer .link-muted:hover{ color:#39ff14; }
+#site-footer .text-accent, #site-footer h5, #site-footer h6{ color:#39ff14 !important; }
+
 @media (max-width: 900px){
     .navbar-nav {
         text-align: center;
@@ -286,56 +322,3 @@ border-radius:8px;
 .product-info{ max-width:unset; }
 }
 
-
-/*prueba
-/* Estilos para el header */
-.navbar {
-    background-color: #000; /* Fondo negro */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra */
-  }
-  
-  .navbar-brand {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  
-  .navbar-brand img {
-    border-radius: 50%; /* Logo circular */
-  }
-  
-  .navbar-nav .nav-link {
-    color: #ccc; /* Color de los enlaces */
-    transition: color 0.3s ease;
-  }
-  
-  .navbar-nav .nav-link:hover {
-    color: #00ff88; /* Verde neón al pasar el mouse */
-  }
-  
-  .btn-success {
-    background-color: #00ff88; /* Botón carrito verde */
-    border: none;
-    color: #000;
-    transition: background-color 0.3s ease;
-  }
-  
-  .btn-success:hover {
-    background-color: #7a00ff; /* Botón carrito morado al pasar el mouse */
-    color: #fff;
-  }
-  
-  #cart-count {
-    background-color: #fff; /* Fondo blanco para el contador */
-    color: #000; /* Texto negro */
-    font-weight: bold;
-    border-radius: 50%; /* Contador circular */
-    padding: 2px 6px;
-    font-size: 12px;
-  }
-  
-  @media (max-width: 768px) {
-    .navbar-nav {
-      text-align: center; /* Centrar enlaces en dispositivos pequeños */
-    }
-  }

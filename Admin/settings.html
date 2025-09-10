@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Configuración — Admin</title>
+  <link rel="stylesheet" href="/Admin/style_admin/style_settings.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">ONE TECH <span>Admin</span></div>
+      <nav class="menu">
+        <a href="dashboard.html">📊 Dashboard</a>
+        <a href="users.html">👥 Usuarios</a>
+        <a href="products.html">📦 Productos</a>
+        <a class="active" href="settings.html">⚙️ Configuración</a>
+      </nav>
+      <div class="sidebar-footer"><a class="logout" href="/login.html">Cerrar sesión</a></div>
+    </aside>
+
+    <main class="content">
+      <header class="topbar">
+        <h1>Configuración</h1>
+        <a class="btn ghost" href="/login.html">Cerrar sesión</a>
+      </header>
+
+      <section class="panel form-grid">
+        <label>Nombre de la empresa
+          <input value="ONE TECH">
+        </label>
+
+        <label>Moneda por defecto
+          <select>
+            <option selected>CLP — Peso Chileno</option>
+            <option>USD — Dólar</option>
+          </select>
+        </label>
+
+        <label>Notificaciones
+          <select>
+            <option>Solo importantes</option>
+            <option selected>Todas</option>
+            <option>Ninguna</option>
+          </select>
+        </label>
+
+        <label>Modo de color
+          <select>
+            <option selected>Claro (predeterminado)</option>
+            <option>Oscuro</option>
+          </select>
+        </label>
+
+        <label>Correo de soporte
+          <input value="soporte@onetech.cl">
+        </label>
+
+        <div class="form-actions">
+          <button class="btn">Guardar cambios</button>
+          <button class="btn ghost">Restablecer</button>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

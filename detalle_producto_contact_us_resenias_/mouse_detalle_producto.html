@@ -1,154 +1,161 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mouse - Detalle Producto</title>
-    <link rel="stylesheet" href="styles.css/styles_mouse_detalle_producto.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mouse — Detalle producto | ONE TECH</title>
+
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/main.css" />
+
+
+  <link rel="stylesheet" href="styles.css/styles_mouse_detalle_producto.css">
 </head>
-<body>
-    <form id="mouse-details" class="border p-4 rounder shadow-sm">
-    <div id="mouse-details">
-        <body class="bg-black text-white">
 
-            <!-- Barra de navegación principal -->
-            <nav class="navbar navbar-expand-lg navbar-dark bg-black shadow-sm py-3">
-              <div class="container">
-            
-                <!-- Logo -->
-                <a class="navbar-brand d-flex align-items-center" href="#">
-                  <img src="tienda/One_tech.png" alt="Logo One Tech" width="55" height="55" class="mr-2 rounded">
-                  <span class="h4 font-weight-bold mb-0 text-success">ONE TECH</span>
-                </a>
-            
-                <!-- Botón hamburguesa para móviles -->
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent"
-                  aria-controls="navbarContent" aria-expanded="false" aria-label="Mostrar menú">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-            
-                <!-- Menú de navegación -->
-                <div class="collapse navbar-collapse" id="navbarContent">
-            
-                  <!-- Enlaces principales -->
-                  <ul class="navbar-nav mx-auto">
-                    <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Productos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Nosotros</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
-                    <li class="nav-item"><a class="nav-link" href="detalle_producto_contact_us_resenias_/contact_us.html">Contacto</a></li>
-                  </ul>
-            
-                  <!-- Botón Carrito con contador -->
-                  <a href="#" class="btn btn-success btn-sm rounded-pill mr-3 position-relative">
-                    🛒 Carrito
-                    <span id="cart-count" class="badge badge-light text-dark position-absolute" style="top: -8px; right: -10px; font-size: 12px;">0</span>
-                  </a>
-            
-                  <!-- Enlaces de sesión -->
-                  <div class="d-none d-lg-block">
-                    <a href="login.html" class="text-success mx-2">Iniciar sesión</a>
-                    <a href="register.html" class="text-success mx-2">Registrarse</a>
-                  </div>
-                </div>
-              </div>
-            </nav>
-        </div>
-        <div class="detalle-producto">
-            <div class="product-images">
-                <img id="main-image" src="productos/MS001 Mouse Mouse Gamer Logitech G502 HERO.webp" alt="Imagen_grande_izquierda">
-                <div class="thumbnails">
-                    <img src="productos/MS001 Mouse Mouse Gamer Logitech G502 HERO.webp" alt="Miniatura 1" onclick="showImage('productos/MS001 Mouse Mouse Gamer Logitech G502 HERO.webp')">
-                    <img src="tienda/g502_2-.png" alt="Miniatura 2" onclick="showImage('tienda/g502_2-.png')">
-                    <img src="tienda/mouse_502_img_3.png" alt="Miniatura 3" onclick="showImage('tienda/mouse_502_img_3.png')">
-                </div>
-            </div>
-            <div class="product-info">
-                <h3>Mouse Gamer Logitech G502 HERO $49.990 CLP</h3>
-                <p> Con sensor de alta precisión y botones
-                personalizables, este mouse es ideal para gamers que buscan un control preciso y
-                personalización.
-                </p>
-                <form action="seleccionar_producto">
-                    <label for="cantidad_product">Cantidad:</label>
-                    <select name="cantidad_productos">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                        <option>6</option>
-                        <option>7</option>
-                        <option>8</option>
-                        <option>9</option>
-                        <option>10</option>
-                    </select>
-                    <button type="submit" class="btn btn-primary">Añadir al carrito</button>
-                </form>
-                <!-- Reseñas -->
-                <details class="reviews">
-                <summary class="reviews-tab">
-                    <span class="stars" aria-label="Valoración 4.5 de 5">
-                    <span class="star full"></span>
-                    <span class="star full"></span>
-                    <span class="star full"></span>
-                    <span class="star full"></span>
-                    <span class="star half"></span>
-                    </span>
-                    <span class="rating-number">4.5</span>
-                    <span class="reviews-count">(24 reseñas)</span>
-                </summary>
+<body class="bg-black text-white">
 
-                <!-- Contenido opcional al desplegar (puedes borrar o editar) -->
-                <div class="reviews-body">
-                    <div class="review-item">
-                    <strong>María</strong> — “Excelente calidad, se siente sólido.”
-                    </div>
-                    <div class="review-item">
-                    <strong>Juan</strong> — “Llegó rápido, funciona perfecto con mi setup.”
-                    </div>
-                    <div>
-                        <nav>
-                            <a href="reseña.html">¿Quieres dejar tu reseña? Aprieta aquí</a>
-                        </nav>
-                    </div>
-                </div>
-                </details>
-            </div>
-        </div>
-            <p class="related-products-text">Related Products</p>
-        <div class="related-products">
-            <div class="related-item">
-                <img src="img_generico1.jpg" alt="Generico1">
-                <div class="related-desc">Catan</div>
-            </div>
-            <div class="related-item">
-                <img src="img_generico2.jpg" alt="Generico2">
-                <div class="related-desc">Consola Retro</div>
-            </div>
-            <div class="related-item">
-                <img src="img_generico3.jpg" alt="Generico3">
-                <div class="related-desc">Silla Gamer</div>
-            </div>
-            <div class="related-item">
-                <img src="img_generico4.jpg" alt="Generico4">
-                <div class="related-desc">Mousepad XL</div>
-            </div>
-            <div class="related-item">
-                <img src="img_generico5.jpg" alt="Generico5">
-                <div class="related-desc">Mouse RGB</div>
-            </div>
-        </div>
-    </div>  
-    </body>
-    <script>
-    function showImage(src) {
-        document.getElementById('main-image').src = src;
-    }
-    </script>
 
-    <!-- Derechos de autor -->
-  <div class="row border-top pt-4 mt-4" style="border-color: rgba(255,255,255,0.1) !important;">
+<nav class="navbar navbar-expand-lg navbar-dark bg-black shadow-sm py-3">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="/main.html">
+      <img src="tienda/One_tech.png" alt="ONE TECH" width="55" height="55" class="mr-2 rounded">
+      <span class="h4 font-weight-bold mb-0 text-success">ONE TECH</span>
+    </a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent"
+      aria-controls="navbarContent" aria-expanded="false" aria-label="Mostrar menú">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarContent">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item"><a class="nav-link" href="/main.html">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="/productos.html">Productos</a></li>
+        <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="detalle_producto_contact_us_resenias_/contact_us.html">Contacto</a></li>
+      </ul>
+
+      <a href="cart.html" class="btn btn-success btn-sm rounded-pill mr-3 position-relative">
+        🛒 Carrito
+        <span id="cart-count" class="badge badge-light text-dark position-absolute" style="top:-8px;right:-10px;font-size:12px;">0</span>
+      </a>
+
+      <div class="d-none d-lg-block">
+        <a href="/login.html" class="text-success mx-2">Iniciar sesión</a>
+        <a href="/register.html" class="text-success mx-2">Registrarse</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div id="mouse-details" class="border p-4 rounder shadow-sm">
+  <div class="breadcrumb_8">
+    <header>
+      <nav>
+        <a href="/main.html">Home</a> <a>></a>
+        <a href="/productos.html">Mouse</a> <a>></a>
+        <a>Mouse Gamer Logitech G502 HERO</a>
+      </nav>
+    </header>
+  </div>
+
+  <div class="detalle-producto">
+    <div class="product-images">
+      <img id="main-image" src="/detalle_producto_contact_us_resenias_/productos/MS001 Mouse Mouse Gamer Logitech G502 HERO.webp" alt="Imagen principal mouse G502">
+      <div class="thumbnails">
+        <img src="/detalle_producto_contact_us_resenias_/productos/MS001 Mouse Mouse Gamer Logitech G502 HERO.webp" alt="Miniatura 1" onclick="showImage('/detalle_producto_contact_us_resenias_/productos/MS001 Mouse Mouse Gamer Logitech G502 HERO.webp')">
+        <img src="/detalle_producto_contact_us_resenias_/productos/mouse_g502_2.png" alt="Miniatura 2" onclick="showImage('/detalle_producto_contact_us_resenias_/productos/mouse_g502_2.png')">
+        <img src="/detalle_producto_contact_us_resenias_/productos/mouse_g502_3.png" alt="Miniatura 3" onclick="showImage('/detalle_producto_contact_us_resenias_/productos/mouse_g502_3.png')">
+      </div>
+    </div>
+
+    <div class="product-info">
+      <h3>Mouse Gamer Logitech G502 HERO $49.990 CLP</h3>
+      <p>
+        Con sensor de alta precisión y botones personalizables, este mouse es ideal para gamers
+        que buscan un control preciso y personalización.
+      </p>
+
+      <form action="seleccionar_producto">
+        <label for="cantidad_product_m">Cantidad:</label>
+        <select name="cantidad_productos" id="cantidad_product_m">
+          <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+          <option>6</option><option>7</option><option>8</option><option>9</option><option>10</option>
+        </select>
+        <button type="submit" class="btn btn-primary">Añadir al carrito</button>
+      </form>
+
+      <details class="reviews">
+        <summary class="reviews-tab">
+          <span class="stars" aria-label="Valoración 4.5 de 5">
+            <span class="star full"></span><span class="star full"></span><span class="star full"></span>
+            <span class="star full"></span><span class="star half"></span>
+          </span>
+          <span class="rating-number">4.5</span>
+          <span class="reviews-count">(24 reseñas)</span>
+        </summary>
+
+        <div class="reviews-body">
+          <div class="review-item"><strong>María</strong> — “Excelente calidad, se siente sólido.”</div>
+          <div class="review-item"><strong>Juan</strong> — “Llegó rápido, funciona perfecto con mi setup.”</div>
+          <div><nav><a href="resenia.html">¿Quieres dejar tu reseña? Aprieta aquí</a></nav></div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <p class="related-products-text">Related Products</p>
+  <div class="related-products">
+    <div class="related-item"><img src="/img/productos/catan.png" alt="Catan"><div class="related-desc">Catan</div></div>
+    <div class="related-item"><img src="/detalle_producto_contact_us_resenias_/productos/ps5_4.png" alt="Consola Retro"><div class="related-desc">Consola PlayStation 5</div></div>
+    <div class="related-item"><img src="/detalle_producto_contact_us_resenias_/productos/SG001 Sillas Gamers Silla Gamer Secretlab Titan.webp" alt="Silla Gamer"><div class="related-desc">Silla Gamer</div></div>
+    <div class="related-item"><img src="/detalle_producto_contact_us_resenias_/tienda/mousepad.png" alt="Mousepad XL"><div class="related-desc">Mousepad XL</div></div>
+    <div class="related-item"><img src="/detalle_producto_contact_us_resenias_/productos/MS001 Mouse Mouse Gamer Logitech G502 HERO.webp" alt="Mouse RGB"><div class="related-desc">Mouse G502</div></div>
+  </div>
+</div>
+
+
+<footer id="site-footer" class="container-fluid bg-black text-white-50 py-5 px-sm-3 px-lg-5 mt-5">
+  <div class="row pt-5">
+    <div class="col-lg-3 col-md-6 mb-4">
+      <a href="/main.html" class="navbar-brand">
+        <h1 class="m-0"><span class="text-white">ONE</span><span class="text-accent">TECH</span></h1>
+      </a>
+      <p><strong>Misión:</strong> Entregar productos gamer de alta calidad en todo Chile, garantizando una experiencia personalizada, rápida y confiable.</p>
+      <p><strong>Visión:</strong> Ser la tienda online gamer líder en Chile, destacando por innovación, fidelización y atención al cliente excepcional.</p>
+    </div>
+
+    <div class="col-lg-3 col-md-6 mb-4">
+      <h5 class="text-white text-uppercase mb-4" style="letter-spacing:2px;">Nuestros Servicios</h5>
+      <ul class="footer-links">
+        <li><a class="link-muted" href="#">Proveedores</a></li>
+        <li><a class="link-muted" href="#">Ubicación de bodega</a></li>
+        <li><a class="link-muted" href="#">Armado de PC</a></li>
+        <li><a class="link-muted" href="#">Promociones</a></li>
+        <li><a class="link-muted" href="#">Testimonios</a></li>
+        <li><a class="link-muted" href="#">Blog</a></li>
+      </ul>
+    </div>
+
+    <div class="col-lg-3 col-md-6 mb-4">
+      <h5 class="text-white text-uppercase mb-4" style="letter-spacing:2px;">Contáctanos</h5>
+      <p>Antonio Varas 303, Of. 606, Providencia, RM</p>
+      <p>+56 9 3190 8354</p>
+      <p>onetech.chile@central.cl</p>
+
+      <h6 class="text-white text-uppercase mt-4 mb-3" style="letter-spacing:2px;">Suscríbete</h6>
+      <div class="input-group">
+        <input type="email" class="form-control border-0" placeholder="Tu correo electrónico">
+        <div class="input-group-append">
+          <button class="btn btn-accent">Enviar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row border-top pt-4 mt-4" style="border-color:rgba(255,255,255,0.1)!important;">
     <div class="col-md-6 text-center text-md-left mb-2 mb-md-0">
       <p class="m-0 text-white-50">&copy; 2025 ONE TECH. Todos los derechos reservados.</p>
     </div>
@@ -158,19 +165,9 @@
   </div>
 </footer>
 
-
-  <!-- Botón volver arriba -->
-  <a href="#" class="btn btn-lg btn-accent btn-lg-square back-to-top">
-    <i class="fa fa-angle-double-up"></i>
-  </a>
-
-  <!-- jQuery (requerido por Bootstrap) -->
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-
-  <!-- Bootstrap Bundle (con Popper) -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Archivo JS principal -->
-  <script src="js/main.js"></script>
-
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+<script>function showImage(src){ document.getElementById('main-image').src = src; }</script>
+</body>
 </html>

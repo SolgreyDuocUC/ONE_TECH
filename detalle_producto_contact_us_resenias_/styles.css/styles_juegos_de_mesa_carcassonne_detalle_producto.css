@@ -255,6 +255,43 @@ border-radius:8px;
 .reviews.reviews-static .reviews-tab{ cursor: default; }
 .reviews.reviews-static .reviews-body{ display: none; }
 
+/* ===== ONE TECH Overrides (Carcassonne) ===== */
+/* Asegurar estilos del contenedor correcto (tu CSS original usa #catan-details) */
+#carcassonne-details{
+  background:#111;
+  border-radius:12px;
+  box-shadow:0 2px 16px rgba(57,255,20,.1);
+  max-width:1200px;
+  margin:32px auto;
+  padding:32px;
+  display:flex; flex-direction:column; gap:24px;
+}
+
+/* Breadcrumb de esta página */
+.breadcrumb_2 header{ margin-bottom:8px; }
+.breadcrumb_2 nav{ font-size:.95rem; }
+.breadcrumb_2 a{ color:#39ff14; text-decoration:underline; }
+.breadcrumb_2 a:last-child{ color:#fff; text-decoration:none; font-weight:700; }
+
+/* Verde neón en hover y rating (sin azul) */
+.thumbnails img:hover{ border-color:#39ff14; }
+.btn.btn-primary:hover{ background:#39ff14; color:#000; }
+.rating-number{ color:#39ff14; }
+.reviews-tab:hover{
+  border-color:#39ff14;
+  box-shadow:0 0 0 2px rgba(57,255,20,.18) inset;
+}
+
+/* Footer como en el resto */
+#site-footer .footer-links{ list-style:none; margin:0; padding-left:0; }
+#site-footer .footer-links li{ margin:6px 0; }
+#site-footer .link-muted{ color:#d3d3d3; text-decoration:none; }
+#site-footer .link-muted:hover{ color:#39ff14; }
+#site-footer .text-accent,
+#site-footer h5,
+#site-footer h6{ color:#39ff14 !important; }
+
+
 @media (max-width: 900px){
 #carcassonne-details{ 
     padding:16px; 

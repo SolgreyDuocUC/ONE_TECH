@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Productos — Admin</title>
+  <link rel="stylesheet" href="/Admin/style_admin/style_products.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">ONE TECH <span>Admin</span></div>
+      <nav class="menu">
+        <a href="dashboard.html">📊 Dashboard</a>
+        <a href="users.html">👥 Usuarios</a>
+        <a class="active" href="products.html">📦 Productos</a>
+        <a href="settings.html">⚙️ Configuración</a>
+      </nav>
+      <div class="sidebar-footer"><a class="logout" href="/login.html">Cerrar sesión</a></div>
+    </aside>
+
+    <main class="content">
+      <header class="topbar">
+        <h1>Productos</h1>
+        <div class="actions">
+          <button class="btn" id="btn-add">Añadir producto</button>
+          <button class="btn ghost">Eliminar seleccionados</button>
+        </div>
+      </header>
+
+      <section class="panel">
+        <div class="table-wrap">
+          <table class="table">
+            <thead>
+              <tr>
+                <th><input type="checkbox"></th>
+                <th>ID</th><th>Producto</th><th>Precio</th><th>Stock</th><th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input type="checkbox"></td>
+                <td>PRD-001</td><td>Mouse Gamer Logitech G502 HERO</td>
+                <td>$49.990</td><td>20</td>
+                <td><button class="link danger">Eliminar</button></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox"></td>
+                <td>PRD-002</td><td>Mousepad Razer Goliathus Extended</td>
+                <td>$29.990</td><td>25</td>
+                <td><button class="link danger">Eliminar</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Modal añadir producto -->
+      <dialog id="addProduct">
+        <form method="dialog" class="modal">
+          <h3>Nuevo producto</h3>
+          <div class="grid2">
+            <label>Nombre<input required></label>
+            <label>ID<input required></label>
+            <label>Precio (CLP)<input type="number" required></label>
+            <label>Stock<input type="number" required></label>
+          </div>
+          <div class="modal-actions">
+            <button class="btn" value="ok">Guardar</button>
+            <button class="btn ghost" value="cancel">Cancelar</button>
+          </div>
+        </form>
+      </dialog>
+    </main>
+  </div>
+
+  <script>
+    const add = document.getElementById('addProduct');
+    document.getElementById('btn-add').addEventListener('click',()=>add.showModal());
+  </script>
+</body>
+</html>

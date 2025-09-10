@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dashboard — Admin</title>
+  <link rel="stylesheet" href="/Admin/style_admin/style_dashboard.css" />
+</head>
+<body>
+  <div class="app">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="brand">ONE TECH <span>Admin</span></div>
+      <nav class="menu">
+        <a class="active" href="dashboard.html">📊 Dashboard</a>
+        <a href="users.html">👥 Usuarios</a>
+        <a href="products.html">📦 Productos</a>
+        <a href="settings.html">⚙️ Configuración</a>
+      </nav>
+      <div class="sidebar-footer">
+        <a class="logout" href="/login.html">Cerrar sesión</a>
+      </div>
+    </aside>
+
+    <!-- Contenido -->
+    <main class="content">
+      <header class="topbar">
+        <h1>¡Hola, Administrador!</h1>
+        <a class="btn ghost" href="/login.html">Cerrar sesión</a>
+      </header>
+
+      <!-- KPIs -->
+      <section class="kpis">
+        <button class="kpi active" data-target="kpi-usuarios">
+          <span class="kpi-label">Total usuarios</span>
+          <span class="kpi-value">3</span>
+        </button>
+        <button class="kpi" data-target="kpi-productos">
+          <span class="kpi-label">Total productos</span>
+          <span class="kpi-value">2</span>
+        </button>
+        <button class="kpi" data-target="kpi-stock">
+          <span class="kpi-label">Stock total</span>
+          <span class="kpi-value">45</span>
+        </button>
+        <button class="kpi" data-target="kpi-inventario">
+          <span class="kpi-label">Valor inventario</span>
+          <span class="kpi-value">$56.000</span>
+        </button>
+      </section>
+
+      <!-- Widgets compactos (sólo los 4 pedidos) -->
+      <section class="widgets">
+        <!-- Evolución de usuarios (línea) -->
+        <div class="widget">
+          <h4>Evolución de usuarios</h4>
+          <div class="mini-chart line sm">
+            <!-- puntos falsos -->
+            <i style="--p1:65%;--p2:58%;--p3:50%;--p4:42%;--p5:35%"></i>
+          </div>
+        </div>
+
+        <!-- Alta de productos (barras) -->
+        <div class="widget">
+          <h4>Alta de productos</h4>
+          <div class="mini-chart bars sm">
+            <i style="--h:30%"></i><i style="--h:45%"></i><i style="--h:60%"></i><i style="--h:50%"></i><i style="--h:70%"></i>
+          </div>
+        </div>
+
+        <!-- Stock por categoría (barras apiladas) -->
+        <div class="widget">
+          <h4>Stock por categoría</h4>
+          <div class="mini-chart stacked sm">
+            <i style="--a:20%;--b:35%"></i>
+            <i style="--a:18%;--b:28%"></i>
+            <i style="--a:25%;--b:20%"></i>
+            <i style="--a:12%;--b:40%"></i>
+          </div>
+        </div>
+
+        <!-- Valor inventario (área) -->
+        <div class="widget">
+          <h4>Valor inventario</h4>
+          <div class="mini-chart area sm">
+            <i style="--p1:20%;--p2:40%;--p3:55%;--p4:62%;--p5:85%"></i>
+          </div>
+        </div>
+      </section>
+
+      <!-- Paneles grandes conmutables por KPI -->
+      <section class="charts">
+        <div id="kpi-usuarios" class="chart-panel active">
+          <h3>Evolución de usuarios</h3>
+          <div class="mini-chart line">
+            <i style="--p1:10%;--p2:28%;--p3:48%;--p4:66%;--p5:80%"></i>
+          </div>
+        </div>
+
+        <div id="kpi-productos" class="chart-panel">
+          <h3>Alta de productos</h3>
+          <div class="mini-chart bars">
+            <i style="--h:20%"></i><i style="--h:30%"></i><i style="--h:55%"></i><i style="--h:55%"></i><i style="--h:70%"></i>
+          </div>
+        </div>
+
+        <div id="kpi-stock" class="chart-panel">
+          <h3>Stock por categoría</h3>
+          <div class="mini-chart stacked">
+            <i style="--a:35%;--b:25%"></i>
+            <i style="--a:20%;--b:40%"></i>
+            <i style="--a:15%;--b:30%"></i>
+            <i style="--a:10%;--b:50%"></i>
+          </div>
+        </div>
+
+        <div id="kpi-inventario" class="chart-panel">
+          <h3>Valor inventario (CLP)</h3>
+          <div class="mini-chart area">
+            <i style="--p1:18%;--p2:35%;--p3:52%;--p4:66%;--p5:100%"></i>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    // Conmutación de paneles por KPI
+    const kpis = document.querySelectorAll('.kpi');
+    const panels = document.querySelectorAll('.chart-panel');
+    kpis.forEach(btn => {
+      btn.addEventListener('click', () => {
+        kpis.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        panels.forEach(p => p.classList.remove('active'));
+        document.getElementById(btn.dataset.target).classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>
